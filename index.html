@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta charset="UTF-8">
+		<title>
+            Pokemon
+		</title>
+	</head>
+	<body>
+        <script src="javascript/tipos.js"></script>
+        <script src="javascript/pokemons.js"></script>
+        <div id="app">
+            <div id="pokemon" onclick="changeColor(this)">
+                <img id="imgPokemon" src="pokemons/0.png">
+            </div>
+            ID:<br>
+            <input type="number" id="pokemonId" min="0" max="386" onkeyup="changePokemon(this.value)"><br>
+            Pokémon:<br>
+            <select id="pokemonNome" onchange="changePokemon(this.value)">
+            </select>
+        </div>
+        <script src="javascript/javascript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+@font-face{
+    font-family: lato;
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: lato; 
+}
+
+#app{
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 400px;
+    text-align: center;
+    font-weight: bold;
+    size: 20;
+}
+
+#pokemon{
+    height: 250px;
+    width: 250px;
+    border: solid 5px #A8A878;
+    border-radius: 10px;
+    background-image: radial-gradient(#A8A878, #A8A878);
+}
+
+#pokemon img{
+    height: 250px;
+    width: 250px;
+}
+
+#pokemonId{
+    border: solid 2px black;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+}
+
+#pokemonNome{
+    border: solid 2px black;
+    border-radius: 5px;
+    height: 35px;
+    width: 100%;
+}
