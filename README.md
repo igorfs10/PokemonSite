@@ -3,14 +3,12 @@
 <br>
 
 Futura página para armazenar dados de pokémon.
-<br>
-<br>
 
-#Créditos
+
+# Créditos
+
+**Imagem ?** - Designed by Freepik from www.flaticon.com
 <br>
+**Imagens dos pokémons** - Bulbapedia
 <br>
-Imagem ? - Designed by Freepik from www.flaticon.com
-<br>
-Imagens dos pokémons - Bulbapedia
-<br>
-Fonte Lato - Google
+**Fonte Lato** - Google
