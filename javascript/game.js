@@ -1,5 +1,5 @@
 "use strict";
-let ATUALIZACAO = 500; //Em Milisegundos
+let ATUALIZACAO = 100; //Em Milisegundos
 
 let pokemon1 = 0,
     pokemon2 = 0,

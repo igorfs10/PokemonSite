@@ -10,7 +10,7 @@ ESPECIE_POKEMON_4 = ESPECIE_POKEMON_3 + 100
 ESPECIE_POKEMON_5 = ESPECIE_POKEMON_4 + 100
 ESPECIE_POKEMON_6 = ESPECIE_POKEMON_5 + 100
 --Atualiza os dados após a quantidade de frames escolhidas
-FRAMES_ATUALIZAR = 30
+FRAMES_ATUALIZAR = 15
 
 function getPokemonId(id)
 	--Pokémon com ids diferentes da dex
