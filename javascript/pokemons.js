@@ -2,8 +2,8 @@
 const POKEMONS = [{
 id: 0,
 nome: "Escolha o Pokémon",
-tipo1: NORMAL,
-tipo2: NORMAL
+tipo1: QUESTION,
+tipo2: QUESTION
 },{
 id: 1,
 nome: "Bulbasaur",
@@ -2319,4 +2319,10 @@ id: 386,
 nome: "Deoxys",
 tipo1: PSYCHIC,
 tipo2: PSYCHIC
+},
+{
+id: 387,
+nome: "Egg",
+tipo1: QUESTION,
+tipo2: QUESTION
 }];

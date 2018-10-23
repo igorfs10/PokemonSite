@@ -1,8 +1,8 @@
 "use strict";
-function changePokemon(id){
-    if(id >= 0 && id < 387 && id != ""){
-        pokemon.style.backgroundImage = `radial-gradient(${POKEMONS[id].tipo1.cor},${POKEMONS[id].tipo2.cor})`;
-        pokemon.style.border = `solid 5px ${POKEMONS[id].tipo1.cor}`;
+
+function mudarPokemon(id){
+    if(id >= 0 && id < 388){
+        pokemon.style.backgroundImage = `linear-gradient(${POKEMONS[id].tipo1.cor},${POKEMONS[id].tipo2.cor})`;
         imgPokemon.src=`./pokemons/${POKEMONS[id].id}.png`;
         pokemonNome.value = id;
         pokemonId.value = id;

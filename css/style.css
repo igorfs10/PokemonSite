@@ -1,3 +1,8 @@
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
 @font-face{
     font-family: lato;
     src: url('../fonts/Lato-Regular.ttf');
@@ -20,15 +25,34 @@
     size: 20;
 }
 
+#game{
+    height: 250px;
+    width: 1500px;
+    background-color: aqua;
+    border: solid 2px black;
+}
+
 #pokemon{
     height: 250px;
     width: 250px;
-    border: solid 5px #A8A878;
     border-radius: 10px;
-    background-image: radial-gradient(#A8A878, #A8A878);
+    background-image: linear-gradient(#68A090, #68A090);
+}
+
+.pokemon{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    background-image: linear-gradient(#68A090, #68A090);
+    float: left;
 }
 
 #pokemon img{
+    height: 250px;
+    width: 250px;
+}
+
+.pokemon img{
     height: 250px;
     width: 250px;
 }

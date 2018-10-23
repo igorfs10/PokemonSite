@@ -16,4 +16,5 @@ const NORMAL = {nome: "Normal", cor: "#A8A878"},
       GHOST = {nome: "Ghost", cor: "#705898"},
       DARK = {nome: "Dark", cor: "#705848"},
       STEEL = {nome: "Steel", cor: "#B8B8D0"},
-      FAIRY = {nome: "Fairy", cor: "#EE99AC"};
+      FAIRY = {nome: "Fairy", cor: "#EE99AC"},
+      QUESTION = {nome: "???", cor: "#68A090"};
