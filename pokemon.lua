@@ -12,6 +12,13 @@ ESPECIE_POKEMON_6 = ESPECIE_POKEMON_5 + 100
 --Atualiza os dados após a quantidade de frames escolhidas
 FRAMES_ATUALIZAR = 15
 
+p1 = 0
+p2 = 0
+p3 = 0
+p4 = 0
+p5 = 0
+p6 = 0
+
 function getPokemonId(id)
 	--Pokémon com ids diferentes da dex
 	if id == 277 then return 252 end
@@ -159,35 +166,44 @@ function fn()
 	--Atualiza a quantidade de frames passa
 	frames = frames + 1
 	if frames%FRAMES_ATUALIZAR == 0 then
-		pokemon1 = memory.readwordsigned(ESPECIE_POKEMON_1)
-		pokemon2 = memory.readwordsigned(ESPECIE_POKEMON_2)
-		pokemon3 = memory.readwordsigned(ESPECIE_POKEMON_3)
-		pokemon4 = memory.readwordsigned(ESPECIE_POKEMON_4)
-		pokemon5 = memory.readwordsigned(ESPECIE_POKEMON_5)
-		pokemon6 = memory.readwordsigned(ESPECIE_POKEMON_6)
 		
-		p1 = getPokemonId(pokemon1)
-		p2 = getPokemonId(pokemon2)
-		p3 = getPokemonId(pokemon3)
-		p4 = getPokemonId(pokemon4)
-		p5 = getPokemonId(pokemon5)
-		p6 = getPokemonId(pokemon6)
+		--Coloca os ids dos pokemons para comparar
+		p1 = memory.readwordsigned(ESPECIE_POKEMON_1)
+		p2 = memory.readwordsigned(ESPECIE_POKEMON_2)
+		p3 = memory.readwordsigned(ESPECIE_POKEMON_3)
+		p4 = memory.readwordsigned(ESPECIE_POKEMON_4)
+		p5 = memory.readwordsigned(ESPECIE_POKEMON_5)
+		p6 = memory.readwordsigned(ESPECIE_POKEMON_6)
 		
-		print(p1)
-		print(p2)
-		print(p3)
-		print(p4)
-		print(p5)
-		print(pokemon6)
+		--Verifica se um pokemon mudou
+		if p1 ~= pokemon1 or p2 ~= pokemon2 or p3 ~= pokemon3 or p4 ~= pokemon4 or p5 ~= pokemon5 or p6 ~= pokemon6 then
 		
-		local file = io.open("pokemonatual.js", "w+")
-		file:write("pokemon1 = " .. p1 .. ";\n")
-		file:write("pokemon2 = " .. p2 .. ";\n")
-		file:write("pokemon3 = " .. p3 .. ";\n")
-		file:write("pokemon4 = " .. p4 .. ";\n")
-		file:write("pokemon5 = " .. p5 .. ";\n")
-		file:write("pokemon6 = " .. p6 .. ";")
-		file:close()
+			--Le os ids que estão na memoria para pegar os pokemons
+			pokemon1 = memory.readwordsigned(ESPECIE_POKEMON_1)
+			pokemon2 = memory.readwordsigned(ESPECIE_POKEMON_2)
+			pokemon3 = memory.readwordsigned(ESPECIE_POKEMON_3)
+			pokemon4 = memory.readwordsigned(ESPECIE_POKEMON_4)
+			pokemon5 = memory.readwordsigned(ESPECIE_POKEMON_5)
+			pokemon6 = memory.readwordsigned(ESPECIE_POKEMON_6)
+			
+			--Converte os pokemons para o id correto
+			p1 = getPokemonId(pokemon1)
+			p2 = getPokemonId(pokemon2)
+			p3 = getPokemonId(pokemon3)
+			p4 = getPokemonId(pokemon4)
+			p5 = getPokemonId(pokemon5)
+			p6 = getPokemonId(pokemon6)
+			
+			--Salva no arquivo os pokemons usados para ser lido pelo Javascript
+			local file = io.open("pokemonatual.js", "w+")
+			file:write("pokemon1 = " .. p1 .. ";\n")
+			file:write("pokemon2 = " .. p2 .. ";\n")
+			file:write("pokemon3 = " .. p3 .. ";\n")
+			file:write("pokemon4 = " .. p4 .. ";\n")
+			file:write("pokemon5 = " .. p5 .. ";\n")
+			file:write("pokemon6 = " .. p6 .. ";")
+			file:close()
+		end
 	end
 end
 gui.register(fn)

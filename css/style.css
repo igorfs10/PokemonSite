@@ -26,10 +26,8 @@
 }
 
 #game{
-    height: 250px;
-    width: 1500px;
-    background-color: aqua;
-    border: solid 2px black;
+    height: 260px;
+    width: 1590px;
 }
 
 #pokemon{
@@ -42,7 +40,10 @@
 .pokemon{
     height: 250px;
     width: 250px;
-    border-radius: 10px;
+    border-radius: 15px;
+    border: solid 5px black;
+    margin-right: 2.5px;
+    margin-left: 2.5px;
     background-image: linear-gradient(#68A090, #68A090);
     float: left;
 }
