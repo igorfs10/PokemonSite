@@ -56,7 +56,7 @@ function getPokemonId(id)
 	if id == 309 then return 278 end
 	if id == 310 then return 279 end
 	if id == 311 then return 283 end
-	if id == 212 then return 284 end
+	if id == 312 then return 284 end
 	if id == 313 then return 320 end
 	if id == 314 then return 321 end
 	if id == 315 then return 300 end

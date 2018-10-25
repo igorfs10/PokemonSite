@@ -15,3 +15,5 @@ Obs:.Funciona só no Pokémon Emerald sem criptografia.
 **Imagens dos pokémons** - Bulbapedia
 <br>
 **Fonte Lato** - Google
+<br>
+**Offsets / Código / Descriptografar** - EverOddish
