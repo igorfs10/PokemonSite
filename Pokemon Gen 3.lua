@@ -28,7 +28,7 @@ local last_party = {}
 for slot = 1, 6 do
 	party_member = {}
 	party_member["id"] = ""
-	party_member["species"] = 0
+	party_member["species"] = 500
 	last_party[slot] = party_member
 end
 	

@@ -1,6 +1,6 @@
-pokemon1 = 257;
-pokemon2 = 303;
-pokemon3 = 217;
-pokemon4 = 133;
-pokemon5 = 231;
-pokemon6 = 151;
+pokemon1 = 386;
+pokemon2 = 384;
+pokemon3 = 280;
+pokemon4 = 281;
+pokemon5 = 285;
+pokemon6 = 285;
