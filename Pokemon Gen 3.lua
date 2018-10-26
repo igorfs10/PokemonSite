@@ -1,6 +1,44 @@
+local bnd,br,bxr=bit.band,bit.bor,bit.bxor
+local rshift, lshift=bit.rshift, bit.lshift
+local mdword=memory.readdwordunsigned
+local mword=memory.readwordunsigned
+local mbyte=memory.readbyteunsigned
+
+--Get the las two letters of game id to choose the right game
+function getGame()
+	letter3 = string.char(mbyte(0x80000ae))
+	letter4 = string.char(mbyte(0x80000af))
+	--check for Ruby/Sapphire
+	if letter3 == "V" or letter3 == "P" then
+		if letter4 == "J" then
+			--JP Version
+			return 4
+		else
+			return 1
+		end
+	--check for Emerald
+	elseif letter3 == "E" then
+		if letter4 == "J" then
+			--JP Version
+			return 5
+		else
+			return 2
+		end
+	else
+		if letter4 == "J" then
+			--JP Version
+			return 6
+		else
+			return 3
+		end
+	end
+end
+
 -- Based on the gen 3 Lua script by FractalFusion
 -- Modified by EverOddish for automatic image updates
-local game=2 --see below
+local game=getGame() --see below
+
+
 local startvalue=0x83ED --insert the first value of RNG
 
 -- It is not necessary to change anything beyond this point.
@@ -60,12 +98,6 @@ dofile "auto_layout_gen3_tables.lua"
 local flag=0
 local last=0
 local counter=0
-
-local bnd,br,bxr=bit.band,bit.bor,bit.bxor
-local rshift, lshift=bit.rshift, bit.lshift
-local mdword=memory.readdwordunsigned
-local mword=memory.readwordunsigned
-local mbyte=memory.readbyteunsigned
 
 local natureorder={"Atk","Def","Spd","SpAtk","SpDef"}
 local naturename={
