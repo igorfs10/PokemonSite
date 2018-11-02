@@ -1,7 +1,13 @@
+require("charmap")
 --Declarations here
 frames = 0
 --Começo dos dados dos pokemons no emerald
 DATA_POKEMON_1 = 0x020244EC
+DATA_POKEMON_2 = DATA_POKEMON_1 + 100
+DATA_POKEMON_3 = DATA_POKEMON_2 + 100
+DATA_POKEMON_4 = DATA_POKEMON_3 + 100
+DATA_POKEMON_5 = DATA_POKEMON_4 + 100
+DATA_POKEMON_6 = DATA_POKEMON_5 + 100
 --Espécie dos pokemons em ordem
 ESPECIE_POKEMON_1 = DATA_POKEMON_1 + 32
 ESPECIE_POKEMON_2 = ESPECIE_POKEMON_1 + 100
@@ -10,7 +16,7 @@ ESPECIE_POKEMON_4 = ESPECIE_POKEMON_3 + 100
 ESPECIE_POKEMON_5 = ESPECIE_POKEMON_4 + 100
 ESPECIE_POKEMON_6 = ESPECIE_POKEMON_5 + 100
 --Atualiza os dados após a quantidade de frames escolhidas
-FRAMES_ATUALIZAR = 15
+FRAMES_ATUALIZAR = 30
 
 p1 = 0
 p2 = 0
@@ -169,22 +175,33 @@ function fn()
 		
 		--Coloca os ids dos pokemons para comparar
 		p1 = memory.readwordsigned(ESPECIE_POKEMON_1)
+		n1 = getName(DATA_POKEMON_1)
 		p2 = memory.readwordsigned(ESPECIE_POKEMON_2)
+		n2 = getName(DATA_POKEMON_2)
 		p3 = memory.readwordsigned(ESPECIE_POKEMON_3)
+		n3 = getName(DATA_POKEMON_3)
 		p4 = memory.readwordsigned(ESPECIE_POKEMON_4)
+		n4 = getName(DATA_POKEMON_4)
 		p5 = memory.readwordsigned(ESPECIE_POKEMON_5)
+		n5 = getName(DATA_POKEMON_5)
 		p6 = memory.readwordsigned(ESPECIE_POKEMON_6)
+		n6 = getName(DATA_POKEMON_6)
 		
 		--Verifica se um pokemon mudou
-		if p1 ~= pokemon1 or p2 ~= pokemon2 or p3 ~= pokemon3 or p4 ~= pokemon4 or p5 ~= pokemon5 or p6 ~= pokemon6 then
-		
+		if p1 ~= pokemon1 or p2 ~= pokemon2 or p3 ~= pokemon3 or p4 ~= pokemon4 or p5 ~= pokemon5 or p6 ~= pokemon6 or n1 ~= name1 or n2 ~= name2 or n3 ~= name3 or n4 ~= name4 or n5 ~= name5 or n6 ~= name6 then
 			--Le os ids que estão na memoria para pegar os pokemons
 			pokemon1 = memory.readwordsigned(ESPECIE_POKEMON_1)
+			name1 = getName(DATA_POKEMON_1)
 			pokemon2 = memory.readwordsigned(ESPECIE_POKEMON_2)
+			name2 = getName(DATA_POKEMON_2)
 			pokemon3 = memory.readwordsigned(ESPECIE_POKEMON_3)
+			name3 = getName(DATA_POKEMON_3)
 			pokemon4 = memory.readwordsigned(ESPECIE_POKEMON_4)
+			name4 = getName(DATA_POKEMON_4)
 			pokemon5 = memory.readwordsigned(ESPECIE_POKEMON_5)
+			name5 = getName(DATA_POKEMON_5)
 			pokemon6 = memory.readwordsigned(ESPECIE_POKEMON_6)
+			name6 = getName(DATA_POKEMON_6)
 			
 			--Converte os pokemons para o id correto
 			p1 = getPokemonId(pokemon1)
@@ -197,11 +214,17 @@ function fn()
 			--Salva no arquivo os pokemons usados para ser lido pelo Javascript
 			local file = io.open("pokemonatual.js", "w+")
 			file:write("pokemon1 = " .. p1 .. ";\n")
+			file:write("name1 = '" .. n1 .. "';\n")
 			file:write("pokemon2 = " .. p2 .. ";\n")
+			file:write("name2 = '" .. n2 .. "';\n")
 			file:write("pokemon3 = " .. p3 .. ";\n")
+			file:write("name3 = '" .. n3 .. "';\n")
 			file:write("pokemon4 = " .. p4 .. ";\n")
+			file:write("name4 = '" .. n4 .. "';\n")
 			file:write("pokemon5 = " .. p5 .. ";\n")
-			file:write("pokemon6 = " .. p6 .. ";")
+			file:write("name5 = '" .. n5 .. "';\n")
+			file:write("pokemon6 = " .. p6 .. ";\n")
+			file:write("name6 = '" .. n6 .. "';")
 			file:close()
 		end
 	end

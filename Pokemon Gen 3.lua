@@ -1,3 +1,5 @@
+require("charmap")
+
 local bnd,br,bxr=bit.band,bit.bor,bit.bxor
 local rshift, lshift=bit.rshift, bit.lshift
 local mdword=memory.readdwordunsigned
@@ -410,6 +412,11 @@ current_time = os.time()
 					party_member = {}
 					party_member["id"] = speciesname
 					party_member["species"] = species
+					if game > 3 then
+						party_member["name"] = ""
+					else
+						party_member["name"] = getName(start)
+					end
 					--party_member["item"] = holditem
 					--party_member["item"] = "none"
 					--party_member["ability"] = abilities[ability + 1] 
@@ -432,6 +439,7 @@ current_time = os.time()
 					party_member = {}
 					party_member["id"] = ""
 					party_member["species"] = 0
+					party_member["name"] = ""
 					--party_member["item"] = holditem
 					--party_member["item"] = ""
 					--party_member["ability"] = abilities[ability + 1] 
@@ -450,11 +458,10 @@ current_time = os.time()
 					party[slot] = party_member
 				
 				end
-
+								
 				current_hp=mword(start+86)
 
-				--print("slot " .. slot .. " " .. speciesname)
-		    end -- for loop slots
+		    end
 
 		    last_check = current_time
 			
@@ -464,8 +471,10 @@ current_time = os.time()
 				for slot = 1, 6 do
 					if party[slot] then
 						file:write("pokemon".. slot .. " = " .. getPokemonId(party[slot].species) .. ";\n")
+						file:write("name".. slot .. " = '" .. party[slot].name .. "';\n")
 					else
-						file:write("pokemon".. slot .. " = " .. 0 .. ";\n")
+						file:write("pokemon".. slot .. " = " .. getPokemonId(party[slot].species) .. ";\n")
+						file:write("name".. slot .. " = '" .. party[slot].name .. "';\n")
 					end
 				end
 				file:close()
