@@ -24,7 +24,6 @@ function atualizarPokemon(){
     head.appendChild(script);
 	for (let i = 1; i <= 6; i++){
 		mudarPokemonJogo(pokemon[i], name[i], i);
-		console.log(pokemon[i]);
 	}
     head.removeChild(script);
 }
