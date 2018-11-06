@@ -1,18 +1,8 @@
 "use strict";
 let ATUALIZACAO = 100; //Em Milisegundos
 
-let pokemon1 = 0,
-	name1 = "",
-    pokemon2 = 0,
-	name2 = "",
-    pokemon3 = 0,
-	name3 = "",
-    pokemon4 = 0,
-	name4 = "",
-    pokemon5 = 0,
-	name5 = "",
-    pokemon6 = 0,
-	name6 = "";
+let pokemon = [0,0,0,0,0,0,0],
+	name = ["","","","","","","",""];
 
 let cxPokemon = ["", cxPokemon1, cxPokemon2, cxPokemon3, cxPokemon4, cxPokemon5, cxPokemon6];
 
@@ -32,12 +22,10 @@ function atualizarPokemon(){
     let script = document.createElement('script');
     script.src = 'pokemonatual.js';
     head.appendChild(script);
-    mudarPokemonJogo(pokemon1, name1, 1);
-    mudarPokemonJogo(pokemon2, name2, 2);
-    mudarPokemonJogo(pokemon3, name3, 3);
-    mudarPokemonJogo(pokemon4, name4, 4);
-    mudarPokemonJogo(pokemon5, name5, 5);
-    mudarPokemonJogo(pokemon6, name6, 6);
+	for (let i = 1; i <= 6; i++){
+		mudarPokemonJogo(pokemon[i], name[i], i);
+		console.log(pokemon[i]);
+	}
     head.removeChild(script);
 }
 

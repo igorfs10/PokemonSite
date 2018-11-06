@@ -335,11 +335,11 @@ current_time = os.time()
 				local file = io.open("pokemonatual.js", "w+")
 				for slot = 1, 6 do
 					if party[slot] then
-						file:write("pokemon".. slot .. " = " .. getPokemonId(party[slot].species) .. ";\n")
-						file:write("name".. slot .. " = '" .. party[slot].name .. "';\n")
+						file:write("pokemon[".. slot .. "] = " .. getPokemonId(party[slot].species) .. ";\n")
+						file:write("name[".. slot .. "] = '" .. party[slot].name .. "';\n")
 					else
-						file:write("pokemon".. slot .. " = " .. getPokemonId(party[slot].species) .. ";\n")
-						file:write("name".. slot .. " = '" .. party[slot].name .. "';\n")
+						file:write("pokemon[".. slot .. "] = " .. getPokemonId(party[slot].species) .. ";\n")
+						file:write("name[".. slot .. "] = '" .. party[slot].name .. "';\n")
 					end
 				end
 				file:close()
