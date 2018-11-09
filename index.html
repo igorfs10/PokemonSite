@@ -15,10 +15,10 @@
                 <img id="imgPokemon" src="pokemons/0.png">
             </div>
             ID:<br>
-            <input type="number" id="pokemonId" min="0" max="386" onkeyup="mudarPokemon(this.value)"><br>
+            <input type="number" id="pokemonId" min="0" max="386" onchange="mudarPokemon(this.value)" onkeyup="mudarPokemon(this.value)"><br>
             Pokémon:<br>
-            <select id="pokemonNome" onchange="mudarPokemon(this.value)">
-            </select>
+            <input list="pokemonNome" name="pokemons" id="pokemonIdNome" onchange="pegaPokemonPorNome(this.value)">
+            <datalist id="pokemonNome"></datalist>
         </div>
         <script src="javascript/javascript.js"></script>
     </body>

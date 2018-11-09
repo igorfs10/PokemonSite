@@ -888,13 +888,13 @@ tipo2: DRAGON
 },
 {
 id: 148,
-nome: "DRAGONair",
+nome: "Dragonair",
 tipo1: DRAGON ,
 tipo2: DRAGON 
 },
 {
 id: 149,
-nome: "DRAGONite",
+nome: "Dragonite",
 tipo1: DRAGON,
 tipo2: FLYING 
 },
