@@ -1,11 +1,71 @@
 <!doctype html>
 <html lang="pt-br">
 	<head>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
 		<meta charset="UTF-8">
 		<title>
             Pokemon
 		</title>
+		<style>
+			@font-face{
+			font-family: lato;
+			src: url('fonts/Lato-Regular.ttf');
+		}
+
+		*{
+			margin: 0px;
+			padding: 0px;
+			text-decoration: none;
+			font-family: lato; 
+		}
+		
+		#game{
+			height: 530px;
+			width: 795px;
+		}
+		
+		.pokemon{
+			position: relative;
+			height: 250px;
+			width: 250px;
+			border-radius: 15px;
+			border: solid 5px black;
+			margin-top: 2.5px;
+			margin-bottom: 2.5px;
+			margin-right: 2.5px;
+			margin-left: 2.5px;
+			background-image: linear-gradient(#68A090, #68A090);
+			float: left;
+			-webkit-touch-callout: none;
+			  -webkit-user-select: none;
+			   -khtml-user-select: none;
+				 -moz-user-select: none;
+				  -ms-user-select: none;
+					  user-select: none;
+		}
+		
+		.pokemon img{
+			height: 250px;
+			width: 250px;
+		}
+		
+		.bottom-left {
+			position: absolute;
+			bottom: 4px;
+			left: 4px;
+			font-size: 34px;
+			font-weight: bold;
+			color: white;
+			text-shadow:
+			-1px -1px 0 #000000,
+			1px -1px 0 #000000,
+			-1px 1px 0 #000000,
+			1px 1px 0 #000000,  
+			-2px 0 0 #000000,
+			2px 0 0 #000000,
+			0 2px 0 #000000,
+			0 -2px 0 #000000; 
+		}
+		</style>
 	</head>
 	<body>
         <script src="javascript/tipos.js"></script>

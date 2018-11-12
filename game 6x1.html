@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+            Pokemon
+		</title>
+		<style>
+			@font-face{
+			font-family: lato;
+			src: url('fonts/Lato-Regular.ttf');
+		}
+
+		*{
+			margin: 0px;
+			padding: 0px;
+			text-decoration: none;
+			font-family: lato; 
+		}
+		
+		#game{
+			height: 265px;
+			width: 1590px;
+		}
+		
+		.pokemon{
+			position: relative;
+			height: 250px;
+			width: 250px;
+			border-radius: 15px;
+			border: solid 5px black;
+			margin-top: 2.5px;
+			margin-bottom: 2.5px;
+			margin-right: 2.5px;
+			margin-left: 2.5px;
+			background-image: linear-gradient(#68A090, #68A090);
+			float: left;
+			-webkit-touch-callout: none;
+			  -webkit-user-select: none;
+			   -khtml-user-select: none;
+				 -moz-user-select: none;
+				  -ms-user-select: none;
+					  user-select: none;
+		}
+		
+		.pokemon img{
+			height: 250px;
+			width: 250px;
+		}
+		
+		.bottom-left {
+			position: absolute;
+			bottom: 4px;
+			left: 4px;
+			font-size: 34px;
+			font-weight: bold;
+			color: white;
+			text-shadow:
+			-1px -1px 0 #000000,
+			1px -1px 0 #000000,
+			-1px 1px 0 #000000,
+			1px 1px 0 #000000,  
+			-2px 0 0 #000000,
+			2px 0 0 #000000,
+			0 2px 0 #000000,
+			0 -2px 0 #000000; 
+		}
+		</style>
+	</head>
+	<body>
+        <script src="javascript/tipos.js"></script>
+        <script src="javascript/pokemons.js"></script>
+        <div id="game">
+            <div id="cxPokemon1" class="pokemon">
+                <img id="imgPokemon1" src="pokemons/0.png">
+				<div id="nomePokemon1" class="bottom-left"></div>
+            </div>
+            <div id="cxPokemon2" class="pokemon">
+                <img id="imgPokemon2" src="pokemons/0.png">
+				<div id="nomePokemon2" class="bottom-left"></div>
+            </div>
+            <div id="cxPokemon3" class="pokemon">
+                <img id="imgPokemon3" src="pokemons/0.png">
+				<div id="nomePokemon3" class="bottom-left"></div>
+            </div>
+            <div id="cxPokemon4" class="pokemon">
+                <img id="imgPokemon4" src="pokemons/0.png">
+				<div id="nomePokemon4" class="bottom-left"></div>
+            </div>
+            <div id="cxPokemon5" class="pokemon">
+                <img id="imgPokemon5" src="pokemons/0.png">
+				<div id="nomePokemon5" class="bottom-left"></div>
+            </div>
+            <div id="cxPokemon6" class="pokemon">
+                <img id="imgPokemon6" src="pokemons/0.png">
+				<div id="nomePokemon6" class="bottom-left"></div>
+            </div>
+        </div>
+        <script src="javascript/game.js"></script>
+    </body>
+</html>
