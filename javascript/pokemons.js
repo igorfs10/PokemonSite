@@ -211,14 +211,14 @@ tipo2: GROUND
 {
 id: 35,
 nome: "Clefairy",
-tipo1: FAIRY ,
-tipo2: FAIRY 
+tipo1: NORMAL ,
+tipo2: NORMAL 
 },
 {
 id: 36,
 nome: "Clefable",
-tipo1: FAIRY ,
-tipo2: FAIRY 
+tipo1: NORMAL ,
+tipo2: NORMAL 
 },
 {
 id: 37,
@@ -236,13 +236,13 @@ tipo2: FIRE
 id: 39,
 nome: "Jigglypuff",
 tipo1: NORMAL,
-tipo2: FAIRY 
+tipo2: NORMAL 
 },
 {
 id: 40,
 nome: "Wigglytuff",
 tipo1: NORMAL,
-tipo2: FAIRY 
+tipo2: NORMAL 
 },
 {
 id: 41,
@@ -734,7 +734,7 @@ tipo2: PSYCHIC
 id: 122,
 nome: "Mr. Mime",
 tipo1: PSYCHIC ,
-tipo2: FAIRY,
+tipo2: PSYCHIC,
 },
 {
 id: 123,
@@ -1039,25 +1039,25 @@ tipo2: ELECTRIC
 {
 id: 173,
 nome: "Cleffa",
-tipo1: FAIRY ,
-tipo2: FAIRY 
+tipo1: NORMAL ,
+tipo2: NORMAL 
 },
 {
 id: 174,
 nome: "Igglybuff",
 tipo1: NORMAL,
-tipo2: FAIRY 
+tipo2: NORMAL 
 },
 {
 id: 175,
 nome: "Togepi",
-tipo1: FAIRY ,
-tipo2: FAIRY 
+tipo1: NORMAL ,
+tipo2: NORMAL 
 },
 {
 id: 176,
 nome: "Togetic",
-tipo1: FAIRY,
+tipo1: NORMAL,
 tipo2: FLYING 
 },
 {
@@ -1100,13 +1100,13 @@ tipo2: GRASS
 id: 183,
 nome: "Marill",
 tipo1: WATER,
-tipo2: FAIRY 
+tipo2: WATER 
 },
 {
 id: 184,
 nome: "Azumarill",
 tipo1: WATER,
-tipo2: FAIRY 
+tipo2: WATER 
 },
 {
 id: 185,
@@ -1255,14 +1255,14 @@ tipo2: GROUND
 {
 id: 209,
 nome: "Snubbull",
-tipo1: FAIRY ,
-tipo2: FAIRY 
+tipo1: NORMAL ,
+tipo2: NORMAL 
 },
 {
 id: 210,
 nome: "Granbull",
-tipo1: FAIRY ,
-tipo2: FAIRY 
+tipo1: NORMAL ,
+tipo2: NORMAL 
 },
 {
 id: 211,
@@ -1682,19 +1682,19 @@ tipo2: FLYING
 id: 280,
 nome: "Ralts",
 tipo1: PSYCHIC,
-tipo2: FAIRY 
+tipo2: PSYCHIC 
 },
 {
 id: 281,
 nome: "Kirlia",
 tipo1: PSYCHIC,
-tipo2: FAIRY 
+tipo2: PSYCHIC 
 },
 {
 id: 282,
 nome: "Gardevoir",
 tipo1: PSYCHIC,
-tipo2: FAIRY 
+tipo2: PSYCHIC 
 },
 {
 id: 283,
@@ -1790,7 +1790,7 @@ tipo2: FIGHTING
 id: 298,
 nome: "Azurill",
 tipo1: NORMAL,
-tipo2: FAIRY 
+tipo2: NORMAL 
 },
 {
 id: 299,
@@ -1820,7 +1820,7 @@ tipo2: GHOST
 id: 303,
 nome: "Mawile",
 tipo1: STEEL,
-tipo2: FAIRY 
+tipo2: STEEL 
 },
 {
 id: 304,
