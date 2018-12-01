@@ -34,8 +34,8 @@
 }
 
 #pokemon img{
-    height: 250px;
-    width: 250px;
+    height: inherit;
+    width: inherit;
 }
 
 #pokemonId, #pokemonIdNome{
