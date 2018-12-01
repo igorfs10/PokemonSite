@@ -3,15 +3,13 @@ const POKEMONS = [{
 id: 0,
 nome: "Escolha o Pokémon",
 tipo1: QUESTION,
-tipo2: QUESTION,
-local: ["-----"]
+tipo2: QUESTION
 },
 {
 id: 1,
 nome: "Bulbasaur",
 tipo1: GRASS,
-tipo2: POISON,
-local: ["101", "102", "103", "104"]
+tipo2: POISON
 },
 {
 id: 2,

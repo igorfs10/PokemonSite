@@ -9,6 +9,11 @@ function mudarPokemon(id){
         pokemonIdNome.value = POKEMONS[id].nome;
         pokemonId.style.border = "solid 2px black";
         pokemonIdNome.style.border = "solid 2px black";
+		let text = "";
+		for(let i in POKEMONS[id].local){
+			text += `<p>${POKEMONS[id].local[i]}</p>`;
+		}
+		local.innerHTML = text;
     }else{
         pokemonId.style.border = "solid 2px red";
         pokemonIdNome.style.border = "solid 2px red";

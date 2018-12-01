@@ -8,6 +8,7 @@
 		</title>
 	</head>
 	<body>
+		<script src="javascript/local.js"></script>
         <script src="javascript/tipos.js"></script>
         <script src="javascript/pokemons.js"></script>
         <div id="app">
@@ -19,6 +20,9 @@
             Pokémon:<br>
             <input list="pokemonNome" name="pokemons" id="pokemonIdNome" onchange="pegaPokemonPorNome(this.value)">
             <datalist id="pokemonNome"></datalist>
+			<br>
+			Local:<br>
+			<div id="local"></div>
         </div>
         <script src="javascript/javascript.js"></script>
     </body>
