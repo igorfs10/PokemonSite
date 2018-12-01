@@ -27,8 +27,8 @@
 }
 
 #pokemon{
-    height: 250px;
-    width: 250px;
+    max-height: auto;
+    width: 100%;
     border-radius: 10px;
     background-image: linear-gradient(#68A090, #68A090);
 }

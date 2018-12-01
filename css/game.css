@@ -12,8 +12,8 @@
 
 .pokemon{
 	position: relative;
-	height: 250px;
-	width: 250px;
+	height: auto;
+	width: auto;
 	border-radius: 15px;
 	border: solid 5px black;
 	margin-top: 2.5px;
