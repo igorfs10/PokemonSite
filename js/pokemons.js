@@ -1,4 +1,6 @@
 "use strict";
+
+//Array constante com os dados de todos os pokémon para usar no site
 const POKEMONS = [{
 id: 0,
 nome: "Escolha o Pokémon",

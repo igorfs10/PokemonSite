@@ -40,7 +40,6 @@ end
 -- Modified by EverOddish for automatic image updates
 local game=getGame() --see below
 
-
 local startvalue=0x83ED --insert the first value of RNG
 
 -- It is not necessary to change anything beyond this point.

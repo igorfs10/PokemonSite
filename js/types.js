@@ -1,4 +1,6 @@
 "use strict";
+
+//Constante com o nome do tipo e a cor do tipo
 const NORMAL = {nome: "Normal", cor: "#A8A878"},
       FIRE = {nome: "Fire", cor: "#F08030"},
       FIGHTING = {nome: "Fighting", cor: "#C03028"},

@@ -1,5 +1,8 @@
 "use strict";
 
+//Funções para ser usada no site
+
+//Atualiza o quadro com os dados do pokémon, usando o ID
 function mudarPokemon(id){
     if(id >= 0 && id < POKEMONS.length && id != ""){
         id = parseInt(id);
@@ -20,15 +23,18 @@ function mudarPokemon(id){
     }
 }
 
+//Cria a lista de pokémon para serem mostradas no combobox
 function criarOpcoes(){
     for(let i in POKEMONS){
         pokemonNome.innerHTML = pokemonNome.innerHTML + `<option value="${POKEMONS[i].nome}"></option>`;
     }
 }
 
+//Função para pegar o id do pokémon pelo nome e atualizar o quadro
 function pegaPokemonPorNome(nome){
     let idPokemon = POKEMONS.findIndex(x => x.nome.toLowerCase() == nome.toLowerCase());
     mudarPokemon(idPokemon);
 }
 
+//Executa a função que cria as combobox
 criarOpcoes();

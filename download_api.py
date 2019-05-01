@@ -3,23 +3,38 @@ import pandas as pd
 import requests
 import json
 
+#Constantes com quantidades de pokémons
 PRIMEIRO_POKEMON = 1
 ULTIMO_POKEMON = 807
+
+#Inicia a sessão e mantém para que a conexão não seja fechaa a cada download
 session = requests.Session()
 
+#Inicia um vetor que vai receber os dados de cada pokémon
 pokemons = []
 
+#Url de onde o script baixa os dados
 URL = "https://pokeapi.co/api/v2/pokemon/"
+
+#Executa um loop que vai baixar do primeiro ao ultimo pokémon
 for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
+	#Baixa a página em formato JSON
 	JSONContent = session.get(URL + str(i)).json()
+
+	#Pega os dados dos pokémons
 	id = JSONContent['id']
 	name = JSONContent['species']['name']
+
+	#Verifica os slots para salvar o tipo de forma correta. Se possuir só 1 tipo ele salva os dois como o mesmo tipo
 	if JSONContent['types'][0]['slot'] == 2:
 		type1 = JSONContent['types'][1]['type']['name']
 		type2 = JSONContent['types'][0]['type']['name']
 	else:
 		type1 = JSONContent['types'][0]['type']['name']
 		type2 = JSONContent['types'][0]['type']['name']
+
+	#Verifica os slots para salvar as habilidades de forma correta. Se possuir uma habilidade, a função define a segunda habilidade usando a primeira
+	#Se não possuir a hidden ability ela ficara vazia
 	if JSONContent['abilities'][0]['slot'] == 3:
 		ability3 = JSONContent['abilities'][0]['ability']['name']
 		if JSONContent['abilities'][1]['slot'] == 2:
@@ -36,6 +51,8 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 		else:
 			ability2 = JSONContent['abilities'][0]['ability']['name']
 			ability1 = JSONContent['abilities'][0]['ability']['name']
+	
+	#Pega cada status para mostrar e soma para ter a base total
 	hp = JSONContent['stats'][5]['base_stat']
 	attack = JSONContent['stats'][4]['base_stat']
 	defense = JSONContent['stats'][3]['base_stat']
@@ -43,7 +60,11 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 	spDefense = JSONContent['stats'][1]['base_stat']
 	speed = JSONContent['stats'][0]['base_stat']
 	total = hp + attack + defense + spAttack + spDefense +speed
+
+	#url para imagem do pokémon, vai ser definida ainda
 	image = "images/" + str(i).zfill(3) + ".png"
+
+	#Coloca os dados no vetor deixando a primeira letra maiuscula e removendo os traços para colocar espaço no lugar
 	pokemons.append([id,
 					name.replace('-',' ').capitalize(),
 					type1.replace('-',' ').capitalize(),
@@ -60,10 +81,21 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 					total,
 					image
 					])
+
+	#Mostra um texto para quando terminar o download de dados de cada pokémon
 	print(name.replace('-',' ').capitalize() + " downloaded.")
 	
+#Coloca os dados dos pokémons em um dataset para montar uma tabela
 dataset = pd.DataFrame(pokemons)
+
+#Definindo o nome das colunas
 dataset.columns = ['Id', 'Name', 'Type_Primary', 'Type_Secondary', 'Primary_Ability', 'Secondary_Ability', 'Hidden_Ability', 'HP', 'Attack', 'Defense', 'Special_Attack', 'Special_Defense', 'Speed', 'Total', 'Image']
+
+#Definindo a primeira coluna como o identificador de cada pokémon
 dataset.set_index('Id', inplace = True)
+
+#Salvando a tabela em um arquivo CSV
 dataset.to_csv("api/pokemons.csv")
+
+#Mostrando uma image de término
 print("End.")

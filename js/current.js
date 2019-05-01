@@ -1,3 +1,6 @@
+"use strict";
+
+//Variáveis que armazenam o pokémon e o nome para ser usado nas páginas
 pokemon[1] = 3;
 name[1] = 'Bulbasaur';
 pokemon[2] = 213;

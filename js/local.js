@@ -1,4 +1,6 @@
 "use strict";
+
+//Constantes com os tipos de rotas
 const WALK = {nome: "Normal", color:"#78C850"},
 	  SURF = {nome: "Surf", color:"#6890F0"},
 	  OLD_ROD = {nome: "Old Rod", color:"#A890F0"},
