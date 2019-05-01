@@ -1,4 +1,4 @@
-# PokemonDados
+# PokemonDados [![Build Status](https://travis-ci.org/igorfs10/PokemonSite.svg?branch=master)](https://travis-ci.org/igorfs10/PokemonSite)
 
 Futura página para armazenar dados de pokémon.
 <br>
