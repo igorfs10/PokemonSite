@@ -1,4 +1,4 @@
-require("charmap")
+require("include")
 
 local bnd,br,bxr=bit.band,bit.bor,bit.bxor
 local rshift, lshift=bit.rshift, bit.lshift

@@ -22,7 +22,7 @@ Obs.: Funciona nas roms padrões da terceira geração e o Emerald sem criptogra
 
 # Créditos
 
-**Imagens dos pokémons** - Bulbapedia
+**Imagens dos pokémons** - Pokemon Company - Bulbapedia
 <br>
 **Fonte Lato** - Google
 <br>
