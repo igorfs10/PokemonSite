@@ -10,7 +10,6 @@ env:
   - USER="travis"
   - EMAIL=""
   - REPO="PokemonSite"
-  - FILES="*"
   - GH_REPO="github.com/igorfs10/${REPO}.git"
   - BRANCH="gh-pages"
 
@@ -18,7 +17,6 @@ install:
   - pip install -r requirements.txt
 
 before_script:
-  - MESSAGE="Travis atualizando API"
   - git clone git://${GH_REPO}
   - cd ${REPO}
 
@@ -29,6 +27,6 @@ after_success:
   - git remote
   - git config user.email ${EMAIL}
   - git config user.name ${USER}
-  - git add ${FILES}
-  - git commit -m ${MESSAGE}
+  - git add *
+  - git commit -m "Travis atualizando API"
   - git push "https://${GITHUB_TOKEN}@${GH_REPO}" {BRANCH} > /dev/null 2>&1
