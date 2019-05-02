@@ -1,4 +1,4 @@
-Id,Name,Type_Primary,Type_Secondary,Primary_Ability,Secondary_Ability,Hidden_Ability,HP,Attack,Defense,Special_Attack,Special_Defense,Speed,Total,Image
+Id,Name,Type_Primary,Type_Secondary,Ability_Primary,Ability_Secondary,Ability_Hidden,HP,Attack,Defense,Special_Attack,Special_Defense,Speed,Total,Image
 1,Bulbasaur,Grass,Poison,Overgrow,Overgrow,Chlorophyll,45,49,49,65,65,45,318,images/001.png
 2,Ivysaur,Grass,Poison,Overgrow,Overgrow,Chlorophyll,60,62,63,80,80,60,405,images/002.png
 3,Venusaur,Grass,Poison,Overgrow,Overgrow,Chlorophyll,80,82,83,100,100,80,525,images/003.png

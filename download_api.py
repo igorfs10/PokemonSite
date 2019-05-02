@@ -89,7 +89,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 dataset = pd.DataFrame(pokemons)
 
 #Definindo o nome das colunas
-dataset.columns = ["Id", "Name", "Type_Primary", "Type_Secondary", "Primary_Ability", "Secondary_Ability", "Hidden_Ability", "HP", "Attack", "Defense", "Special_Attack", "Special_Defense", "Speed", "Total", "Image"]
+dataset.columns = ["Id", "Name", "Type_Primary", "Type_Secondary", "Ability_Primary", "Ability_Secondary", "Ability_Hidden", "HP", "Attack", "Defense", "Special_Attack", "Special_Defense", "Speed", "Total", "Image"]
 
 #Definindo a primeira coluna como o identificador de cada pokémon
 dataset.set_index("Id", inplace = True)
