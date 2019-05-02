@@ -24,6 +24,7 @@ script:
   - python test.py
 
 after_success:
+  - python test.py
   - git config user.email ${EMAIL}
   - git config user.name "travisci"
   - git add *
