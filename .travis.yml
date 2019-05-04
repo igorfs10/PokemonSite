@@ -23,6 +23,7 @@ script:
   - python generateAPI.py
 
 after_success:
+  - cp api/* ${REPO}/api
   - cd ${REPO}
   - git config user.email ${EMAIL}
   - git config user.name ${USER}

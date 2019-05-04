@@ -11,9 +11,9 @@ ULTIMO_POKEMON = 807
 dirName = "api"
 try:
     os.mkdir(dirName)
-    print("Directory " , dirName ,  " Created ") 
+    print("Directory " , dirName ,  " Created.") 
 except FileExistsError:
-    print("Directory " , dirName ,  " already exists")
+    print("Directory " , dirName ,  " already exists.")
     
 #Abre o csv
 dataset = pd.read_csv("pokemons.csv")
@@ -29,7 +29,6 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
     print(id + " generated.")
 
 #salva os dados numa string
-print(dataset[["Name"]])
 data = dataset[["Id", "Name"]].to_json(orient = "records").replace("[", "").replace("]", "")
 data = "{[" + data + "]}"
 
@@ -39,7 +38,5 @@ with open("api/pokemons.json", "w") as file:
 
 with open("api/index.json", "w") as file:
     file.write(data)
-
-copy_tree("api", "/PokemonSite/api")
 
 print("API generated.")
