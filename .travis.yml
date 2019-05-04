@@ -7,8 +7,6 @@ matrix:
       sudo: true
 env:
   global:
-  - EMAIL="'travis@travis-ci.org'"
-  - USER="'travisci'"
   - REPO="PokemonSite"
   - GH_REPO="github.com/igorfs10/${REPO}.git"
   - BRANCH="gh-pages"
@@ -25,8 +23,8 @@ script:
 after_success:
   - cp api/* ${REPO}/api
   - cd ${REPO}
-  - git config user.email ${EMAIL}
-  - git config user.name ${USER}
+  - git config user.email "travis@travis-ci.org"
+  - git config user.name "travisci"
   - git add *
   - git commit -m "Travis atualizando API"
-  - git push "https://${GITHUB_TOKEN}@${GH_REPO}" ${BRANCH}
+  - git push "git://${GITHUB_TOKEN}@${GH_REPO}" ${BRANCH}
