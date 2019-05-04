@@ -27,4 +27,4 @@ after_success:
   - git config user.name "travisci"
   - git add *
   - git commit -m "Travis atualizando API"
-  - git push "git://${GITHUB_TOKEN}@${GH_REPO}" ${BRANCH}
+  - git push "https://${GITHUB_TOKEN}@${GH_REPO}" ${BRANCH}
