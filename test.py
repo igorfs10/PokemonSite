@@ -6,7 +6,7 @@ PRIMEIRO_POKEMON = 1
 ULTIMO_POKEMON = 807
 
 #Abre o csv
-dataset = pd.read_csv("api/pokemons.csv")
+dataset = pd.read_csv("pokemons.csv")
 
 #Definindo a primeira coluna como o identificador de cada pokémon
 dataset.set_index("Id", inplace = True)

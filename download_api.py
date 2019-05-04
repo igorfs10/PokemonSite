@@ -7,7 +7,7 @@ import json
 PRIMEIRO_POKEMON = 1
 ULTIMO_POKEMON = 807
 
-#Inicia a sessão e mantém para que a conexão não seja fechaa a cada download
+#Inicia a sessão e mantém para que a conexão não seja fechada a cada download
 session = requests.Session()
 
 #Inicia um vetor que vai receber os dados de cada pokémon
@@ -59,10 +59,6 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 	spAttack = JSONContent["stats"][2]["base_stat"]
 	spDefense = JSONContent["stats"][1]["base_stat"]
 	speed = JSONContent["stats"][0]["base_stat"]
-	total = hp + attack + defense + spAttack + spDefense +speed
-
-	#url para imagem do pokémon, vai ser definida ainda
-	image = "images/" + str(i).zfill(3) + ".png"
 
 	#Coloca os dados no vetor deixando a primeira letra maiuscula e removendo os traços para colocar espaço no lugar
 	pokemons.append([id,
@@ -77,9 +73,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 					defense,
 					spAttack,
 					spDefense,
-					speed,
-					total,
-					image
+					speed
 					])
 
 	#Mostra um texto para quando terminar o download de dados de cada pokémon
@@ -89,13 +83,13 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 dataset = pd.DataFrame(pokemons)
 
 #Definindo o nome das colunas
-dataset.columns = ["Id", "Name", "Type_Primary", "Type_Secondary", "Ability_Primary", "Ability_Secondary", "Ability_Hidden", "HP", "Attack", "Defense", "Special_Attack", "Special_Defense", "Speed", "Total", "Image"]
+dataset.columns = ["Id", "Name", "Type_Primary", "Type_Secondary", "Ability_Primary", "Ability_Secondary", "Ability_Hidden", "HP", "Attack", "Defense", "Special_Attack", "Special_Defense", "Speed"]
 
 #Definindo a primeira coluna como o identificador de cada pokémon
 dataset.set_index("Id", inplace = True)
 
 #Salvando a tabela em um arquivo CSV
-dataset.to_csv("api/pokemons.csv")
+dataset.to_csv("pokemons.csv")
 
 #Mostrando uma image de término
 print("End.")

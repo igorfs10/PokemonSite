@@ -13,10 +13,10 @@
         <script src="js/pokemons.js"></script>
         <div id="app">
             <div id="pokemon">
-                <img id="imgPokemon" src="pokemons/0.png">
+                <img id="imgPokemon" src="images/000.png">
             </div>
             ID:<br>
-            <input type="number" id="pokemonId" min="0" max="386" onchange="mudarPokemon(this.value)" onkeyup="mudarPokemon(this.value)"><br>
+            <input type="number" id="pokemonId" min="0" max="386" onchange="mudarPokemon(this.value)" onkeyup="mudarPokemon(this.value)" onclick="mudarPokemon(this.value)"><br>
             Pokémon:<br>
             <input list="pokemonNome" name="pokemons" id="pokemonIdNome" onchange="pegaPokemonPorNome(this.value)">
             <datalist id="pokemonNome"></datalist>

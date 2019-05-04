@@ -1,24 +1,8 @@
 # PokemonDados  [![Build Status](https://travis-ci.org/igorfs10/PokemonSite.svg?branch=master)](https://travis-ci.org/igorfs10/PokemonSite)
 
-Futura página para armazenar dados de pokémon.
-<br>
+Futura página e API para armazenar dados de pokémon.
+
 [Pagina](https://igorfs10.github.io/PokemonSite/)
-
-# Pokemon para stream WIP
-
-Futura ferramenta para mostrar a equipe de pokémon com o nome em uma stream.
-<br>
-Exemplos de páginas para usar em streaming.
-<br>
-[6x1](https://igorfs10.github.io/PokemonSite/game%206x1.html)
-<br>
-[3x2](https://igorfs10.github.io/PokemonSite/game%203x2.html)
-<br>
-[2x3](https://igorfs10.github.io/PokemonSite/game%202x3.html)
-<br>
-[1x6](https://igorfs10.github.io/PokemonSite/game%201x6.html)
-<br>
-Obs.: Funciona nas roms padrões da terceira geração e o Emerald sem criptografia.
 
 # Créditos
 

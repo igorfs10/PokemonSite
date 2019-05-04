@@ -7,7 +7,7 @@ function mudarPokemon(id){
     if(id >= 0 && id < POKEMONS.length && id != ""){
         id = parseInt(id);
         pokemon.style.backgroundImage = `linear-gradient(${POKEMONS[id].tipo1.cor},${POKEMONS[id].tipo2.cor})`;
-        imgPokemon.src=`./pokemons/${id}.png`;
+        imgPokemon.src=`./images/${id.pad(3)}.png`;
         pokemonId.value = id;
         pokemonIdNome.value = POKEMONS[id].nome;
         pokemonId.style.border = "solid 2px black";
@@ -34,6 +34,13 @@ function criarOpcoes(){
 function pegaPokemonPorNome(nome){
     let idPokemon = POKEMONS.findIndex(x => x.nome.toLowerCase() == nome.toLowerCase());
     mudarPokemon(idPokemon);
+}
+
+//Função para colocar casas decimais nos ids
+Number.prototype.pad = function(size) {
+    let s = String(this);
+    while (s.length < (size || 2)) {s = "0" + s;}
+    return s;
 }
 
 //Executa a função que cria as combobox
