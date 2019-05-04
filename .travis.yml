@@ -7,7 +7,8 @@ matrix:
       sudo: true
 env:
   global:
-  - EMAIL="travis@travis-ci.org"
+  - EMAIL="'travis@travis-ci.org'"
+  - USER="'travisci'"
   - REPO="PokemonSite"
   - GH_REPO="github.com/igorfs10/${REPO}.git"
   - BRANCH="gh-pages"
@@ -16,17 +17,15 @@ install:
   - pip install -r requirements.txt
 
 before_script:
-  - git clone git://${GH_REPO}
-  - cd ${REPO}
-  - git checkout ${BRANCH}
+  - git clone -b ${BRANCH} ${GH_REPO}
 
 script:
-  - python test.py
+  - python generate.py
 
 after_success:
-  - python test.py
+  - cd ${REPO}
   - git config user.email ${EMAIL}
-  - git config user.name "travisci"
+  - git config user.name ${USER}
   - git add *
   - git commit -m "Travis atualizando API"
   - git push "https://${GITHUB_TOKEN}@${GH_REPO}" ${BRANCH}
