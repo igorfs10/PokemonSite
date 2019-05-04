@@ -17,7 +17,7 @@ install:
   - pip install -r requirements.txt
 
 before_script:
-  - git clone -b ${BRANCH} ${GH_REPO}
+  - git clone -b ${BRANCH} git://${GH_REPO}
 
 script:
   - python generate.py
