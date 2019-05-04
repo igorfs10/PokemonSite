@@ -20,7 +20,7 @@ before_script:
   - git clone -b ${BRANCH} git://${GH_REPO}
 
 script:
-  - python generate.py
+  - python generateAPI.py
 
 after_success:
   - cd ${REPO}
