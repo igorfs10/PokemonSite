@@ -18,7 +18,7 @@ except FileExistsError:
 dataset = pd.read_csv("pokemons.csv")
 
 #Pega o ultimo pokémon baseado no arquivo csv
-ULTIMO_POKEMON = dataset.shape[0] + 1
+ULTIMO_POKEMON = dataset.shape[0]
 
 #Definindo a primeira coluna como o identificador de cada pokémon
 #dataset.set_index("Id", inplace = True)
