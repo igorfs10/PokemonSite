@@ -18,7 +18,7 @@ before_script:
   - git clone -b ${BRANCH} git://${GH_REPO}
 
 script:
-  - python generateAPI.py
+  - python generate_api.py
 
 after_success:
   - cp api/* ${REPO}/api

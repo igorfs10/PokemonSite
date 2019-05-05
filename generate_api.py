@@ -26,8 +26,6 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
     id = str(i)
     with open("api/" + id +".json", "w") as file:
         file.write(data)
-    with open("api/" + id , "w") as file:
-        file.write(data)
     print(id + " generated.")
 
 #salva os dados numa string
