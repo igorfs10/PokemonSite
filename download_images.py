@@ -29,7 +29,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 	#Baixa a imagem do site
 	result = session.get(URL + id + ".png")
 	#Salva o arquivo no computador
-	open("images/" + i + ".png", "wb").write(result.content)
+	open("images/" + str(i) + ".png", "wb").write(result.content)
 
 	#Abre a imagem para redimensionar
 	img = Image.open(file)
