@@ -24,8 +24,9 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 	id = str(i).zfill(3)
 
 	#Gera o nome do arquivo com o diretório para salvar
-	file = "images/" + id + ".png"
-
+	file = "images/" + str(i) + ".png"
+	urlFile = "images/" + id + ".png"
+	
 	#Baixa a imagem do site
 	result = session.get(URL + id + ".png")
 	#Salva o arquivo no computador
