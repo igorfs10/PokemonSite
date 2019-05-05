@@ -5,7 +5,6 @@ import json
 import os
 
 PRIMEIRO_POKEMON = 1
-ULTIMO_POKEMON = 808
 
 #Cria pasta API se não existir
 dirName = "api"
@@ -17,6 +16,9 @@ except FileExistsError:
     
 #Abre o csv
 dataset = pd.read_csv("pokemons.csv")
+
+#Pega o ultimo pokémon baseado no arquivo csv
+ULTIMO_POKEMON = dataset.shape[0] + 1
 
 #Definindo a primeira coluna como o identificador de cada pokémon
 #dataset.set_index("Id", inplace = True)
