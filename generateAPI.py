@@ -5,7 +5,7 @@ import json
 import os
 
 PRIMEIRO_POKEMON = 1
-ULTIMO_POKEMON = 807
+ULTIMO_POKEMON = 808
 
 #Cria pasta API se não existir
 dirName = "api"
@@ -25,6 +25,8 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
     data = dataset.iloc[i-1:i].to_json(orient = "records").replace("[", "").replace("]", "")
     id = str(i)
     with open("api/" + id +".json", "w") as file:
+        file.write(data)
+    with open("api/" + id , "w") as file:
         file.write(data)
     print(id + " generated.")
 
