@@ -16,6 +16,7 @@ install:
 
 before_script:
   - git clone -b ${BRANCH} git://${GH_REPO}
+  - rm ${REPO}/api/*
 
 script:
   - python generate_api.py
