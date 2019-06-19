@@ -26,7 +26,7 @@ ULTIMO_POKEMON = dataset.shape[0]
 for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
     data = dataset.iloc[i-1:i].to_json(orient = "records").replace("[", "").replace("]", "")
     id = str(i)
-    with open("api/" + id, "w") as file:
+    with open("api/" + id + ".json", "w") as file:
         file.write(data)
     print(id + " generated.")
 
@@ -35,10 +35,10 @@ data = dataset[["Id", "Name"]].to_json(orient = "records").replace("[", "").repl
 data = "{[" + data + "]}"
 
 #salva a string no arquivo
-with open("api/pokemons", "w") as file:
+with open("api/pokemons.json", "w") as file:
     file.write(data)
 
-with open("api/index", "w") as file:
+with open("api/index.json", "w") as file:
     file.write(data)
 
 print("API generated.")
