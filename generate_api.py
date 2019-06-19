@@ -18,7 +18,7 @@ except FileExistsError:
 dataset = pd.read_csv("pokemons.csv")
 
 #Pega o ultimo pokémon baseado no arquivo csv
-ULTIMO_POKEMON = dataset.shape[0]
+ULTIMO_POKEMON = dataset.shape[0] + 1
 
 #Definindo a primeira coluna como o identificador de cada pokémon
 #dataset.set_index("Id", inplace = True)
@@ -26,7 +26,7 @@ ULTIMO_POKEMON = dataset.shape[0]
 for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
     data = dataset.iloc[i-1:i].to_json(orient = "records").replace("[", "").replace("]", "")
     id = str(i)
-    with open("api/" + id + ".json", "w") as file:
+    with open("api/" + id +".json", "w") as file:
         file.write(data)
     print(id + " generated.")
 
