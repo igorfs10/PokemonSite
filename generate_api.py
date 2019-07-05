@@ -4,7 +4,7 @@ import numpy as np
 import json
 import os
 
-PRIMEIRO_POKEMON = 1
+PRIMEIRO_POKEMON = 0
 
 #Cria pasta API se não existir
 dirName = "api"
