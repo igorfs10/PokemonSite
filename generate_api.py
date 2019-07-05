@@ -32,7 +32,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 
 #salva os dados numa string
 data = dataset[["id", "name"]].to_json(orient = "records").replace("[", "").replace("]", "")
-data = "{'results':[" + data + "]}"
+data = '{"results":[' + data + ']}'
 
 #salva a string no arquivo
 with open("api/pokemons.json", "w") as file:
