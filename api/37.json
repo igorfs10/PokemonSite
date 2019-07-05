@@ -1,1 +1,1 @@
-{"id":37,"name":"Vulpix","type_primary":"Fire","type_secondary":"Fire","ability_primary":"Flash fire","ability_secondary":"Flash fire","ability_hidden":"Drought","hp":38,"attack":41,"defense":40,"special_attack":50,"special_defense":65,"speed":65}
+{"id":37,"name":"Vulpix","type_primary":"Fire","type_secondary":null,"ability_primary":"Flash fire","ability_secondary":null,"ability_hidden":"Drought","hp":38,"attack":41,"defense":40,"special_attack":50,"special_defense":65,"speed":65,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/37.png"}

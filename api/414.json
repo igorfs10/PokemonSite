@@ -1,1 +1,1 @@
-{"id":414,"name":"Mothim","type_primary":"Bug","type_secondary":"Flying","ability_primary":"Swarm","ability_secondary":"Swarm","ability_hidden":"Tinted lens","hp":70,"attack":94,"defense":50,"special_attack":94,"special_defense":50,"speed":66}
+{"id":414,"name":"Mothim","type_primary":"Bug","type_secondary":"Flying","ability_primary":"Swarm","ability_secondary":null,"ability_hidden":"Tinted lens","hp":70,"attack":94,"defense":50,"special_attack":94,"special_defense":50,"speed":66,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/414.png"}

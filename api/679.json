@@ -1,1 +1,1 @@
-{"id":679,"name":"Honedge","type_primary":"Steel","type_secondary":"Ghost","ability_primary":"No guard","ability_secondary":"No guard","ability_hidden":null,"hp":45,"attack":80,"defense":100,"special_attack":35,"special_defense":37,"speed":28}
+{"id":679,"name":"Honedge","type_primary":"Steel","type_secondary":"Ghost","ability_primary":"No guard","ability_secondary":null,"ability_hidden":null,"hp":45,"attack":80,"defense":100,"special_attack":35,"special_defense":37,"speed":28,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/679.png"}

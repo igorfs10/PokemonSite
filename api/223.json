@@ -1,1 +1,1 @@
-{"id":223,"name":"Remoraid","type_primary":"Water","type_secondary":"Water","ability_primary":"Hustle","ability_secondary":"Sniper","ability_hidden":"Moody","hp":35,"attack":65,"defense":35,"special_attack":65,"special_defense":35,"speed":65}
+{"id":223,"name":"Remoraid","type_primary":"Water","type_secondary":null,"ability_primary":"Hustle","ability_secondary":"Sniper","ability_hidden":"Moody","hp":35,"attack":65,"defense":35,"special_attack":65,"special_defense":35,"speed":65,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/223.png"}

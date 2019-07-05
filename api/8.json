@@ -1,1 +1,1 @@
-{"id":8,"name":"Wartortle","type_primary":"Water","type_secondary":"Water","ability_primary":"Torrent","ability_secondary":"Torrent","ability_hidden":"Rain dish","hp":59,"attack":63,"defense":80,"special_attack":65,"special_defense":80,"speed":58}
+{"id":8,"name":"Wartortle","type_primary":"Water","type_secondary":null,"ability_primary":"Torrent","ability_secondary":null,"ability_hidden":"Rain dish","hp":59,"attack":63,"defense":80,"special_attack":65,"special_defense":80,"speed":58,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/8.png"}

@@ -1,1 +1,1 @@
-{"id":116,"name":"Horsea","type_primary":"Water","type_secondary":"Water","ability_primary":"Swift swim","ability_secondary":"Sniper","ability_hidden":"Damp","hp":30,"attack":40,"defense":70,"special_attack":70,"special_defense":25,"speed":60}
+{"id":116,"name":"Horsea","type_primary":"Water","type_secondary":null,"ability_primary":"Swift swim","ability_secondary":"Sniper","ability_hidden":"Damp","hp":30,"attack":40,"defense":70,"special_attack":70,"special_defense":25,"speed":60,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/116.png"}

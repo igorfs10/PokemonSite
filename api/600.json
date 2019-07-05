@@ -1,1 +1,1 @@
-{"id":600,"name":"Klang","type_primary":"Steel","type_secondary":"Steel","ability_primary":"Plus","ability_secondary":"Minus","ability_hidden":"Clear body","hp":60,"attack":80,"defense":95,"special_attack":70,"special_defense":85,"speed":50}
+{"id":600,"name":"Klang","type_primary":"Steel","type_secondary":null,"ability_primary":"Plus","ability_secondary":"Minus","ability_hidden":"Clear body","hp":60,"attack":80,"defense":95,"special_attack":70,"special_defense":85,"speed":50,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/600.png"}

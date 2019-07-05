@@ -1,1 +1,1 @@
-{"id":5,"name":"Charmeleon","type_primary":"Fire","type_secondary":"Fire","ability_primary":"Blaze","ability_secondary":"Blaze","ability_hidden":"Solar power","hp":58,"attack":64,"defense":58,"special_attack":80,"special_defense":65,"speed":80}
+{"id":5,"name":"Charmeleon","type_primary":"Fire","type_secondary":null,"ability_primary":"Blaze","ability_secondary":null,"ability_hidden":"Solar power","hp":58,"attack":64,"defense":58,"special_attack":80,"special_defense":65,"speed":80,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/5.png"}

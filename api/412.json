@@ -1,1 +1,1 @@
-{"id":412,"name":"Burmy","type_primary":"Bug","type_secondary":"Bug","ability_primary":"Shed skin","ability_secondary":"Shed skin","ability_hidden":"Overcoat","hp":40,"attack":29,"defense":45,"special_attack":29,"special_defense":45,"speed":36}
+{"id":412,"name":"Burmy","type_primary":"Bug","type_secondary":null,"ability_primary":"Shed skin","ability_secondary":null,"ability_hidden":"Overcoat","hp":40,"attack":29,"defense":45,"special_attack":29,"special_defense":45,"speed":36,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/412.png"}

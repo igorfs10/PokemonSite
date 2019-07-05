@@ -1,1 +1,1 @@
-{"id":246,"name":"Larvitar","type_primary":"Rock","type_secondary":"Ground","ability_primary":"Guts","ability_secondary":"Guts","ability_hidden":"Sand veil","hp":50,"attack":64,"defense":50,"special_attack":45,"special_defense":50,"speed":41}
+{"id":246,"name":"Larvitar","type_primary":"Rock","type_secondary":"Ground","ability_primary":"Guts","ability_secondary":null,"ability_hidden":"Sand veil","hp":50,"attack":64,"defense":50,"special_attack":45,"special_defense":50,"speed":41,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/246.png"}

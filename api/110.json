@@ -1,1 +1,1 @@
-{"id":110,"name":"Weezing","type_primary":"Poison","type_secondary":"Poison","ability_primary":"Levitate","ability_secondary":"Levitate","ability_hidden":null,"hp":65,"attack":90,"defense":120,"special_attack":85,"special_defense":70,"speed":60}
+{"id":110,"name":"Weezing","type_primary":"Poison","type_secondary":null,"ability_primary":"Levitate","ability_secondary":null,"ability_hidden":null,"hp":65,"attack":90,"defense":120,"special_attack":85,"special_defense":70,"speed":60,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/110.png"}

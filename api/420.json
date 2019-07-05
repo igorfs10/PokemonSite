@@ -1,1 +1,1 @@
-{"id":420,"name":"Cherubi","type_primary":"Grass","type_secondary":"Grass","ability_primary":"Chlorophyll","ability_secondary":"Chlorophyll","ability_hidden":null,"hp":45,"attack":35,"defense":45,"special_attack":62,"special_defense":53,"speed":35}
+{"id":420,"name":"Cherubi","type_primary":"Grass","type_secondary":null,"ability_primary":"Chlorophyll","ability_secondary":null,"ability_hidden":null,"hp":45,"attack":35,"defense":45,"special_attack":62,"special_defense":53,"speed":35,"image":"https:\/\/raw.githubusercontent.com\/igorfs10\/PokemonSite\/gh-pages\/images\/420.png"}
