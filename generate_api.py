@@ -31,7 +31,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
     print(id + " generated.")
 
 #salva os dados numa string
-data = dataset[["Id", "Name"]].to_json(orient = "records").replace("[", "").replace("]", "")
+data = dataset[["id", "name"]].to_json(orient = "records").replace("[", "").replace("]", "")
 data = "{'results':[" + data + "]}"
 
 #salva a string no arquivo
