@@ -1,1 +1,1 @@
-{"Id":95,"Name":"Onix","Type_Primary":"Rock","Type_Secondary":"Ground","Ability_Primary":"Rock head","Ability_Secondary":"Sturdy","Ability_Hidden":"Weak armor","HP":35,"Attack":45,"Defense":160,"Special_Attack":30,"Special_Defense":45,"Speed":70}
+{"id":95,"name":"Onix","type_primary":"Rock","type_secondary":"Ground","ability_primary":"Rock head","ability_secondary":"Sturdy","ability_hidden":"Weak armor","hp":35,"attack":45,"defense":160,"special_attack":30,"special_defense":45,"speed":70}

@@ -1,1 +1,1 @@
-{"Id":48,"Name":"Venonat","Type_Primary":"Bug","Type_Secondary":"Poison","Ability_Primary":"Compound eyes","Ability_Secondary":"Tinted lens","Ability_Hidden":"Run away","HP":60,"Attack":55,"Defense":50,"Special_Attack":40,"Special_Defense":55,"Speed":45}
+{"id":48,"name":"Venonat","type_primary":"Bug","type_secondary":"Poison","ability_primary":"Compound eyes","ability_secondary":"Tinted lens","ability_hidden":"Run away","hp":60,"attack":55,"defense":50,"special_attack":40,"special_defense":55,"speed":45}

@@ -1,1 +1,1 @@
-{"Id":24,"Name":"Arbok","Type_Primary":"Poison","Type_Secondary":"Poison","Ability_Primary":"Intimidate","Ability_Secondary":"Shed skin","Ability_Hidden":"Unnerve","HP":60,"Attack":95,"Defense":69,"Special_Attack":65,"Special_Defense":79,"Speed":80}
+{"id":24,"name":"Arbok","type_primary":"Poison","type_secondary":"Poison","ability_primary":"Intimidate","ability_secondary":"Shed skin","ability_hidden":"Unnerve","hp":60,"attack":95,"defense":69,"special_attack":65,"special_defense":79,"speed":80}

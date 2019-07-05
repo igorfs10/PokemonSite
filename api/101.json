@@ -1,1 +1,1 @@
-{"Id":101,"Name":"Electrode","Type_Primary":"Electric","Type_Secondary":"Electric","Ability_Primary":"Soundproof","Ability_Secondary":"Static","Ability_Hidden":"Aftermath","HP":60,"Attack":50,"Defense":70,"Special_Attack":80,"Special_Defense":80,"Speed":150}
+{"id":101,"name":"Electrode","type_primary":"Electric","type_secondary":"Electric","ability_primary":"Soundproof","ability_secondary":"Static","ability_hidden":"Aftermath","hp":60,"attack":50,"defense":70,"special_attack":80,"special_defense":80,"speed":150}

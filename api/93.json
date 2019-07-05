@@ -1,1 +1,1 @@
-{"Id":93,"Name":"Haunter","Type_Primary":"Ghost","Type_Secondary":"Poison","Ability_Primary":"Levitate","Ability_Secondary":"Levitate","Ability_Hidden":null,"HP":45,"Attack":50,"Defense":45,"Special_Attack":115,"Special_Defense":55,"Speed":95}
+{"id":93,"name":"Haunter","type_primary":"Ghost","type_secondary":"Poison","ability_primary":"Levitate","ability_secondary":"Levitate","ability_hidden":null,"hp":45,"attack":50,"defense":45,"special_attack":115,"special_defense":55,"speed":95}

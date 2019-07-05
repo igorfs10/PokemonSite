@@ -1,1 +1,1 @@
-{"Id":13,"Name":"Weedle","Type_Primary":"Bug","Type_Secondary":"Poison","Ability_Primary":"Shield dust","Ability_Secondary":"Shield dust","Ability_Hidden":"Run away","HP":40,"Attack":35,"Defense":30,"Special_Attack":20,"Special_Defense":20,"Speed":50}
+{"id":13,"name":"Weedle","type_primary":"Bug","type_secondary":"Poison","ability_primary":"Shield dust","ability_secondary":"Shield dust","ability_hidden":"Run away","hp":40,"attack":35,"defense":30,"special_attack":20,"special_defense":20,"speed":50}

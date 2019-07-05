@@ -1,1 +1,1 @@
-{"Id":25,"Name":"Pikachu","Type_Primary":"Electric","Type_Secondary":"Electric","Ability_Primary":"Static","Ability_Secondary":"Static","Ability_Hidden":"Lightning rod","HP":35,"Attack":55,"Defense":40,"Special_Attack":50,"Special_Defense":50,"Speed":90}
+{"id":25,"name":"Pikachu","type_primary":"Electric","type_secondary":"Electric","ability_primary":"Static","ability_secondary":"Static","ability_hidden":"Lightning rod","hp":35,"attack":55,"defense":40,"special_attack":50,"special_defense":50,"speed":90}

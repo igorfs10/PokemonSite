@@ -1,1 +1,1 @@
-{"Id":26,"Name":"Raichu","Type_Primary":"Electric","Type_Secondary":"Electric","Ability_Primary":"Static","Ability_Secondary":"Static","Ability_Hidden":"Lightning rod","HP":60,"Attack":90,"Defense":55,"Special_Attack":90,"Special_Defense":80,"Speed":110}
+{"id":26,"name":"Raichu","type_primary":"Electric","type_secondary":"Electric","ability_primary":"Static","ability_secondary":"Static","ability_hidden":"Lightning rod","hp":60,"attack":90,"defense":55,"special_attack":90,"special_defense":80,"speed":110}

@@ -1,1 +1,1 @@
-{"Id":123,"Name":"Scyther","Type_Primary":"Bug","Type_Secondary":"Flying","Ability_Primary":"Swarm","Ability_Secondary":"Technician","Ability_Hidden":"Steadfast","HP":70,"Attack":110,"Defense":80,"Special_Attack":55,"Special_Defense":80,"Speed":105}
+{"id":123,"name":"Scyther","type_primary":"Bug","type_secondary":"Flying","ability_primary":"Swarm","ability_secondary":"Technician","ability_hidden":"Steadfast","hp":70,"attack":110,"defense":80,"special_attack":55,"special_defense":80,"speed":105}

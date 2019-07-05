@@ -1,1 +1,1 @@
-{"Id":23,"Name":"Ekans","Type_Primary":"Poison","Type_Secondary":"Poison","Ability_Primary":"Intimidate","Ability_Secondary":"Shed skin","Ability_Hidden":"Unnerve","HP":35,"Attack":60,"Defense":44,"Special_Attack":40,"Special_Defense":54,"Speed":55}
+{"id":23,"name":"Ekans","type_primary":"Poison","type_secondary":"Poison","ability_primary":"Intimidate","ability_secondary":"Shed skin","ability_hidden":"Unnerve","hp":35,"attack":60,"defense":44,"special_attack":40,"special_defense":54,"speed":55}

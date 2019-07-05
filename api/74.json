@@ -1,1 +1,1 @@
-{"Id":74,"Name":"Geodude","Type_Primary":"Rock","Type_Secondary":"Ground","Ability_Primary":"Rock head","Ability_Secondary":"Sturdy","Ability_Hidden":"Sand veil","HP":40,"Attack":80,"Defense":100,"Special_Attack":30,"Special_Defense":30,"Speed":20}
+{"id":74,"name":"Geodude","type_primary":"Rock","type_secondary":"Ground","ability_primary":"Rock head","ability_secondary":"Sturdy","ability_hidden":"Sand veil","hp":40,"attack":80,"defense":100,"special_attack":30,"special_defense":30,"speed":20}

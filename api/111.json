@@ -1,1 +1,1 @@
-{"Id":111,"Name":"Rhyhorn","Type_Primary":"Ground","Type_Secondary":"Rock","Ability_Primary":"Lightning rod","Ability_Secondary":"Rock head","Ability_Hidden":"Reckless","HP":80,"Attack":85,"Defense":95,"Special_Attack":30,"Special_Defense":30,"Speed":25}
+{"id":111,"name":"Rhyhorn","type_primary":"Ground","type_secondary":"Rock","ability_primary":"Lightning rod","ability_secondary":"Rock head","ability_hidden":"Reckless","hp":80,"attack":85,"defense":95,"special_attack":30,"special_defense":30,"speed":25}

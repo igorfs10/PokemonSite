@@ -1,1 +1,1 @@
-{"Id":76,"Name":"Golem","Type_Primary":"Rock","Type_Secondary":"Ground","Ability_Primary":"Rock head","Ability_Secondary":"Sturdy","Ability_Hidden":"Sand veil","HP":80,"Attack":120,"Defense":130,"Special_Attack":55,"Special_Defense":65,"Speed":45}
+{"id":76,"name":"Golem","type_primary":"Rock","type_secondary":"Ground","ability_primary":"Rock head","ability_secondary":"Sturdy","ability_hidden":"Sand veil","hp":80,"attack":120,"defense":130,"special_attack":55,"special_defense":65,"speed":45}
