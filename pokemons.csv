@@ -1,4 +1,5 @@
 id,name,type_primary,type_secondary,ability_primary,ability_secondary,ability_hidden,hp,attack,defense,special_attack,special_defense,speed,image
+0,,,,,,,,,,,,,"https://raw.githubusercontent.com/igorfs10/PokemonSite/gh-pages/images/0.png"
 1,Bulbasaur,Grass,Poison,Overgrow,,Chlorophyll,45,49,49,65,65,45,"https://raw.githubusercontent.com/igorfs10/PokemonSite/gh-pages/images/1.png"
 2,Ivysaur,Grass,Poison,Overgrow,,Chlorophyll,60,62,63,80,80,60,"https://raw.githubusercontent.com/igorfs10/PokemonSite/gh-pages/images/2.png"
 3,Venusaur,Grass,Poison,Overgrow,,Chlorophyll,80,82,83,100,100,80,"https://raw.githubusercontent.com/igorfs10/PokemonSite/gh-pages/images/3.png"
