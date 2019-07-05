@@ -24,8 +24,8 @@ ULTIMO_POKEMON = dataset.shape[0]
 #dataset.set_index("Id", inplace = True)
 
 for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
-    data = dataset.iloc[i-1:i].to_json(orient = "records").replace("[", "").replace("]", "")
-    id = str(i)
+    data = dataset.iloc[i-1:i].to_json(orient = "records").replace("[", "").replace("]", "").replace("\/", "/")
+    id = str(i-1)
     with open("api/" + id +".json", "w") as file:
         file.write(data)
     print(id + " generated.")
