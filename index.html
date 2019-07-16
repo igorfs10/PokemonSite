@@ -4,26 +4,21 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 		<meta charset="UTF-8">
 		<title>
-            Pokemon
-		</title>
-	</head>
+            Pokémon
+        </title>
+        <script src="js/vue.min.js"></script>
+    </head>
 	<body>
-		<script src="js/local.js"></script>
-        <script src="js/types.js"></script>
-        <script src="js/pokemons.js"></script>
         <div id="app">
-            <div id="pokemon">
-                <img id="imgPokemon" src="images/0.png">
+            <div id="pokemon" v-bind:style="cores">
+                <img id="imgPokemon" v-bind:src="pokemon.image">
             </div>
             ID:<br>
-            <input type="number" id="pokemonId" min="0" max="386" onchange="mudarPokemon(this.value)" onkeyup="mudarPokemon(this.value)" onclick="mudarPokemon(this.value)"><br>
+            <input type="number" min="0" id="pokemonId" v-on:input="changePokemon"><br>
             Pokémon:<br>
-            <input list="pokemonNome" name="pokemons" id="pokemonIdNome" onchange="pegaPokemonPorNome(this.value)">
-            <datalist id="pokemonNome"></datalist>
+            <input type="text" name="pokemons" id="pokemonIdNome" v-model="pokemon.name" disabled>
 			<br>
-			Local:<br>
-			<div id="local"></div>
         </div>
-        <script src="js/include.js"></script>
     </body>
+    <script src="js/app.js"></script>
 </html>

@@ -1,8 +1,3 @@
-@viewport {
-  width: device-width;
-  zoom: 1;
-}
-
 @font-face{
     font-family: lato;
     src: url('../fonts/Lato-Regular.ttf');
@@ -30,7 +25,6 @@
     max-height: auto;
     width: 100%;
     border-radius: 10px;
-    background-image: linear-gradient(#68A090, #68A090);
 }
 
 #pokemon img{
