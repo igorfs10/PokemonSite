@@ -42,7 +42,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 			ability2 = JSONContent["abilities"][1]["ability"]["name"]
 			ability1 = JSONContent["abilities"][2]["ability"]["name"]
 		else:
-			""
+			ability2 = ""
 			ability1 = JSONContent["abilities"][1]["ability"]["name"]
 	else:
 		ability3 = ""
