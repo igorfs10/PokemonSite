@@ -29,7 +29,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
     name = str(dataset.iloc[i-1:i,1].values[0])
     with open("api/" + id +".json", "w") as file:
         file.write(data)
-    with open("api/" + name +".json", "w") as file:
+    with open("api/" + name.lower() +".json", "w") as file:
         file.write(data)
     print(id + " generated.")
 
