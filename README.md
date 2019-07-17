@@ -5,9 +5,18 @@ Futura página e API para armazenar dados de pokémon.
 [Pagina](https://igorfs10.github.io/PokemonSite/)
 <br>
 <br>
-Url da API para pegar todos os pokémons: https://igorfs10.github.io/PokemonSite/api/ ou https://igorfs10.github.io/PokemonSite/api/pokemons.json
+Url da API para pegar todos os pokémons:
 <br>
-Url da API com id para pegar o pokémon: https://igorfs10.github.io/PokemonSite/api/1.json
+https://igorfs10.github.io/PokemonSite/api/
+<br>
+https://igorfs10.github.io/PokemonSite/api/pokemons.json
+<br>
+Url da API com id para pegar o pokémon:
+<br>
+https://igorfs10.github.io/PokemonSite/api/1.json
+<br>
+https://igorfs10.github.io/PokemonSite/api/bulbasaur.json
+<br>
 
 # Créditos
 
