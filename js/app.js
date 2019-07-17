@@ -9,8 +9,9 @@ new Vue({
     el: "#app",
     data: {
         pokemon: {
-            name: null,
             id: 0,
+            name: null,
+            color: "",
             type_primary: null,
             type_secondary: null,
             image: "https://raw.githubusercontent.com/igorfs10/PokemonSite/gh-pages/images/0.png"
@@ -32,14 +33,15 @@ new Vue({
             }else{
                 this.pokemon = pokemons[inputId];
             }
+
+            this.colors = {"background-image": "linear-gradient(" + getPokemonColor(this.pokemon.color) + ", " + getPokemonColor(this.pokemon.color) +")"};
+
             if(this.pokemon.type_secondary){
-                this.colors = {"background-image": "linear-gradient(" + getTypeColor(this.pokemon.type_primary) + ", " + getTypeColor(this.pokemon.type_secondary) +")"};
                 this.typeColors = {"background-image": "linear-gradient(to right, " + getTypeColor(this.pokemon.type_primary) + ", " + getTypeColor(this.pokemon.type_secondary) +")"};
                 this.typePrimary = this.pokemon.type_primary;
                 this.typeSecondary = this.pokemon.type_secondary;
                 this.singleType = null;
             }else{
-                this.colors = {"background-image": "linear-gradient(" + getTypeColor(this.pokemon.type_primary) + ", " + getTypeColor(this.pokemon.type_primary) +")"};
                 this.typeColors = {"background-image": "linear-gradient(to right, " + getTypeColor(this.pokemon.type_primary) + ", " + getTypeColor(this.pokemon.type_primary) +")"};
                 this.typePrimary = null;
                 this.typeSecondary = null;
@@ -87,6 +89,33 @@ function getTypeColor(type){
             return "#B8B8D0";
         case "Fairy":
             return "#EE99AC";
+        default:
+            return "#68A090";
+    }
+}
+
+function getPokemonColor(color){
+    switch(color){
+        case "Red":
+            return "#F05868";
+        case "Blue":
+            return "#3088F0";
+        case "Yellow":
+            return "#F0D048";
+        case "Green":
+            return "#40B868";
+        case "Black":
+            return "#585858";
+        case "Brown":
+            return "#B07030";
+        case "Purple":
+            return "#A868C0";
+        case "Gray":
+            return "#A0A0A0";
+        case "White":
+            return "#F0F0F0";
+        case "Pink":
+            return "#F890C8";
         default:
             return "#68A090";
     }
