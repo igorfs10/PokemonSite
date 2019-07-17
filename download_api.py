@@ -24,6 +24,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 	#Pega os dados dos pokémons
 	id = JSONContent["id"]
 	name = JSONContent["species"]["name"]
+	JSONSpeciesContent = session.get(JSONContent["species"]["url"]).json()
 
 	#Verifica os slots para salvar o tipo de forma correta. Se possuir só 1 tipo ele salva os dois como o mesmo tipo
 	if JSONContent["types"][0]["slot"] == 2:
@@ -59,7 +60,8 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 	spAttack = JSONContent["stats"][2]["base_stat"]
 	spDefense = JSONContent["stats"][1]["base_stat"]
 	speed = JSONContent["stats"][0]["base_stat"]
-
+	color = JSONSpeciesContent["color"]["name"]
+	
 	#Coloca os dados no vetor deixando a primeira letra maiuscula e removendo os traços para colocar espaço no lugar
 	pokemons.append([id,
 					name.replace("-"," ").capitalize(),
@@ -73,7 +75,8 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 					defense,
 					spAttack,
 					spDefense,
-					speed
+					speed,
+					color.replace("-"," ").capitalize()
 					])
 
 	#Mostra um texto para quando terminar o download de dados de cada pokémon
@@ -83,7 +86,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 dataset = pd.DataFrame(pokemons)
 
 #Definindo o nome das colunas
-dataset.columns = ["Id", "Name", "Type_Primary", "Type_Secondary", "Ability_Primary", "Ability_Secondary", "Ability_Hidden", "HP", "Attack", "Defense", "Special_Attack", "Special_Defense", "Speed"]
+dataset.columns = ["Id", "Name", "Type_Primary", "Type_Secondary", "Ability_Primary", "Ability_Secondary", "Ability_Hidden", "HP", "Attack", "Defense", "Special_Attack", "Special_Defense", "Speed", "Color"]
 
 #Definindo a primeira coluna como o identificador de cada pokémon
 dataset.set_index("Id", inplace = True)
