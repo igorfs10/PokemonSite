@@ -27,7 +27,7 @@ new Vue({
             if(inputId >= pokemons.length){
                 this.pokemon = pokemons[pokemons.length - 1];
                 pokemonId.value = pokemons.length - 1;
-            }else if(typeof inputId !== NaN || inputId < 0){
+            }else if(isNaN(inputId) || inputId < 0){
                 this.pokemon = pokemons[0];
             }else{
                 this.pokemon = pokemons[inputId];
