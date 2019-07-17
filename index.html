@@ -12,8 +12,8 @@
         <div id="app">
             <div id="pokemon" v-bind:style="cores">
                 <img id="imgPokemon" v-bind:src="pokemon.image">
-            </div>
-            <br>
+            </div><br>
+            Type:<br>
             <div id="types" v-bind:style="coresTipo">
                 <div id="typePrimary">
                     {{typePrimary}}
@@ -24,7 +24,7 @@
                 <div id="typeSecondary">
                     {{typeSecondary}}
                 </div>
-            </div><br>
+            </div>
             ID:<br>
             <input type="number" min="0" id="pokemonId" v-on:input="changePokemon"><br>
             Pokémon:<br>
