@@ -20,11 +20,12 @@ URL = "https://pokeapi.co/api/v2/pokemon/"
 for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 	#Baixa a página em formato JSON
 	JSONContent = session.get(URL + str(i)).json()
+	JSONSpeciesContent = session.get(JSONContent["species"]["url"]).json()
 
 	#Pega os dados dos pokémons
 	id = JSONContent["id"]
-	name = JSONContent["species"]["name"]
-	JSONSpeciesContent = session.get(JSONContent["species"]["url"]).json()
+	name = JSONSpeciesContent["names"][2]["name"]
+	color = JSONSpeciesContent["color"]["name"]
 
 	#Verifica os slots para salvar o tipo de forma correta. Se possuir só 1 tipo ele salva os dois como o mesmo tipo
 	if JSONContent["types"][0]["slot"] == 2:
@@ -37,59 +38,74 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 	#Verifica os slots para salvar as habilidades de forma correta. Se possuir uma habilidade, a função define a segunda habilidade usando a primeira
 	#Se não possuir a hidden ability ela ficara vazia
 	if JSONContent["abilities"][0]["slot"] == 3:
-		ability3 = JSONContent["abilities"][0]["ability"]["name"]
+		JSONAbilityContent = session.get(JSONContent["abilities"][0]["ability"]["url"]).json()
+		ability3 = JSONAbilityContent["names"][2]["name"]
+
 		if JSONContent["abilities"][1]["slot"] == 2:
-			ability2 = JSONContent["abilities"][1]["ability"]["name"]
-			ability1 = JSONContent["abilities"][2]["ability"]["name"]
+			JSONAbilityContent = session.get(JSONContent["abilities"][1]["ability"]["url"]).json()
+			ability2 = JSONAbilityContent["names"][2]["name"]
+
+			JSONAbilityContent = session.get(JSONContent["abilities"][2]["ability"]["url"]).json()
+			ability1 = JSONAbilityContent["names"][2]["name"]
 		else:
 			ability2 = ""
-			ability1 = JSONContent["abilities"][1]["ability"]["name"]
+
+			JSONAbilityContent = session.get(JSONContent["abilities"][1]["ability"]["url"]).json()
+			ability1 = JSONAbilityContent["names"][2]["name"]
 	else:
 		ability3 = ""
+
 		if JSONContent["abilities"][0]["slot"] == 2:
-			ability2 = JSONContent["abilities"][0]["ability"]["name"]
-			ability1 = JSONContent["abilities"][1]["ability"]["name"]
+			JSONAbilityContent = session.get(JSONContent["abilities"][0]["ability"]["url"]).json()
+			ability2 = JSONAbilityContent["names"][2]["name"]
+
+			JSONAbilityContent = session.get(JSONContent["abilities"][1]["ability"]["url"]).json()
+			ability1 = JSONAbilityContent["names"][2]["name"]
 		else:
 			ability2 = ""
-			ability1 = JSONContent["abilities"][0]["ability"]["name"]
+
+			JSONAbilityContent = session.get(JSONContent["abilities"][0]["ability"]["url"]).json()
+			ability1 = JSONAbilityContent["names"][2]["name"]
 	
-	#Pega cada status para mostrar e soma para ter a base total
+	#Pega cada status para mostrar
 	hp = JSONContent["stats"][5]["base_stat"]
 	attack = JSONContent["stats"][4]["base_stat"]
 	defense = JSONContent["stats"][3]["base_stat"]
 	spAttack = JSONContent["stats"][2]["base_stat"]
 	spDefense = JSONContent["stats"][1]["base_stat"]
 	speed = JSONContent["stats"][0]["base_stat"]
-	color = JSONSpeciesContent["color"]["name"]
+
+	image = "https://raw.githubusercontent.com/igorfs10/PokemonSite/gh-pages/images/" + str(id) + ".png"
 	
 	#Coloca os dados no vetor deixando a primeira letra maiuscula e removendo os traços para colocar espaço no lugar
 	pokemons.append([id,
-					name.replace("-"," ").capitalize(),
-					type1.replace("-"," ").capitalize(),
-					type2.replace("-"," ").capitalize(),
-					ability1.replace("-"," ").capitalize(),
-					ability2.replace("-"," ").capitalize(),
-					ability3.replace("-"," ").capitalize(),
+					name,
+					color.replace("-"," ").capitalize(),
+					type1.capitalize(),
+					type2.capitalize(),
+					ability1,
+					ability2,
+					ability3,
 					hp,
 					attack,
 					defense,
 					spAttack,
 					spDefense,
 					speed,
-					color.replace("-"," ").capitalize()
+					image
 					])
 
 	#Mostra um texto para quando terminar o download de dados de cada pokémon
-	print(name.replace("-"," ").capitalize() + " downloaded.")
+	print(name + " downloaded.")
 	
 #Coloca os dados dos pokémons em um dataset para montar uma tabela
 dataset = pd.DataFrame(pokemons)
 
 #Definindo o nome das colunas
-dataset.columns = ["Id", "Name", "Type_Primary", "Type_Secondary", "Ability_Primary", "Ability_Secondary", "Ability_Hidden", "HP", "Attack", "Defense", "Special_Attack", "Special_Defense", "Speed", "Color"]
+dataset.columns = ["id", "name", "color", "type_primary", "type_secondary", "ability_primary", "ability_Secondary", "Ability_hidden", "hp", "attack", "defense", "special_attack", "special_defense", "speed", "image"]
 
 #Definindo a primeira coluna como o identificador de cada pokémon
-dataset.set_index("Id", inplace = True)
+dataset.set_index("id", inplace = True)
 
 #Salvando a tabela em um arquivo CSV
 dataset.to_csv("pokemons.csv")
