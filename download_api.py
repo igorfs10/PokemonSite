@@ -32,7 +32,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 		type2 = JSONContent["types"][0]["type"]["name"]
 	else:
 		type1 = JSONContent["types"][0]["type"]["name"]
-		type2 = JSONContent["types"][0]["type"]["name"]
+		type2 = ""
 
 	#Verifica os slots para salvar as habilidades de forma correta. Se possuir uma habilidade, a função define a segunda habilidade usando a primeira
 	#Se não possuir a hidden ability ela ficara vazia
@@ -42,7 +42,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 			ability2 = JSONContent["abilities"][1]["ability"]["name"]
 			ability1 = JSONContent["abilities"][2]["ability"]["name"]
 		else:
-			ability2 = JSONContent["abilities"][1]["ability"]["name"]
+			""
 			ability1 = JSONContent["abilities"][1]["ability"]["name"]
 	else:
 		ability3 = ""
@@ -50,7 +50,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
 			ability2 = JSONContent["abilities"][0]["ability"]["name"]
 			ability1 = JSONContent["abilities"][1]["ability"]["name"]
 		else:
-			ability2 = JSONContent["abilities"][0]["ability"]["name"]
+			ability2 = ""
 			ability1 = JSONContent["abilities"][0]["ability"]["name"]
 	
 	#Pega cada status para mostrar e soma para ter a base total
