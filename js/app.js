@@ -15,20 +15,35 @@ new Vue({
             type_secondary: null,
             image: "https://raw.githubusercontent.com/igorfs10/PokemonSite/gh-pages/images/0.png"
         },
-        cores: {"background-image": "linear-gradient(#68A090, #68A090)"}
+        cores: {"background-image": "linear-gradient(#68A090, #68A090)"},
+        coresTipo: {"background-image": "linear-gradient(to right, #68A090, #68A090)"},
+        typePrimary: null,
+        singleType: null,
+        typeSecondary: null
     },
     methods: {
         changePokemon(event){
-            if(event.target.value < pokemons.length){
-                this.pokemon = pokemons[event.target.value];
+            var inputId = parseInt(event.target.value);
+            if((inputId < pokemons.length) && (inputId >= 0)){
+                this.pokemon = pokemons[inputId];
+            }else if((typeof inputId !== NaN) || (inputId < 0)){
+                this.pokemon = pokemons[0];
             }else{
                 this.pokemon = pokemons[pokemons.length - 1];
                 pokemonId.value = pokemons.length - 1;
             }
             if(this.pokemon.type_secondary){
                 this.cores = {"background-image": "linear-gradient(" + getTypeColor(this.pokemon.type_primary) + ", " + getTypeColor(this.pokemon.type_secondary) +")"};
+                this.coresTipo = {"background-image": "linear-gradient(to right, " + getTypeColor(this.pokemon.type_primary) + ", " + getTypeColor(this.pokemon.type_secondary) +")"};
+                this.typePrimary = this.pokemon.type_primary;
+                this.typeSecondary = this.pokemon.type_secondary;
+                this.singleType = null;
             }else{
                 this.cores = {"background-image": "linear-gradient(" + getTypeColor(this.pokemon.type_primary) + ", " + getTypeColor(this.pokemon.type_primary) +")"};
+                this.coresTipo = {"background-image": "linear-gradient(to right, " + getTypeColor(this.pokemon.type_primary) + ", " + getTypeColor(this.pokemon.type_primary) +")"};
+                this.typePrimary = null;
+                this.typeSecondary = null;
+                this.singleType = this.pokemon.type_primary;
             }
         }
     }
