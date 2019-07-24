@@ -10,7 +10,7 @@ PRIMEIRO_POKEMON = 1
 dirName = "api"
 try:
     os.mkdir(dirName)
-    print("Directory " , dirName ,  " Created.") 
+    print("Directory " , dirName ,  " created.") 
 except FileExistsError:
     print("Directory " , dirName ,  " already exists.")
     
@@ -20,9 +20,7 @@ dataset = pd.read_csv("pokemons.csv")
 #Pega o ultimo pokémon baseado no arquivo csv
 ULTIMO_POKEMON = dataset.shape[0]
 
-#Definindo a primeira coluna como o identificador de cada pokémon
-#dataset.set_index("Id", inplace = True)
-
+#Salva os dados de cada pokémon em um arquivo com o nome e outro com o id
 for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
     data = dataset.iloc[i-1:i].to_json(orient = "records").replace("[", "").replace("]", "").replace("\/", "/")
     id = str(dataset.iloc[i-1:i,0].values[0])
