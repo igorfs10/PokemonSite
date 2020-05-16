@@ -3,7 +3,7 @@ from PIL import Image
 
 #Constantes com quantidades de pokémons
 PRIMEIRO_POKEMON = 1
-ULTIMO_POKEMON = 809
+ULTIMO_POKEMON = 890
 
 #Tamando da imagem baixada
 COMPRIMENTO = 250
