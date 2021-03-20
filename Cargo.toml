@@ -8,8 +8,9 @@ edition = "2018"
 
 [dependencies]
 photon-rs = { git = "https://github.com/silvia-odwyer/photon/" }
-rayon = "^1.4.1"
-ureq = "^1.5.1"
+rayon = "1.5.0"
+ureq = "2.0.2"
+console = "0.14.1"
 
 [profile.release]
 lto = true
