@@ -11,6 +11,8 @@ photon-rs = { git = "https://github.com/silvia-odwyer/photon/" }
 rayon = "1.5.0"
 ureq = "2.0.2"
 console = "0.14.1"
+tokio = { version = "1.4.0", features = ["full"] }
+futures = "0.3.13"
 
 [profile.release]
 lto = true
