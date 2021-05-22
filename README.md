@@ -11,7 +11,7 @@ https://igorfs10.github.io/PokemonSite/api/
 <br>
 Url da API com id para pegar o pokémon:
 <br>
-https://igorfs10.github.io/PokemonSite/api/1.json
+https://igorfs10.github.io/PokemonSite/api/1
 <br>
 
 # Créditos
