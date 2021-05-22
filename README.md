@@ -9,13 +9,9 @@ Url da API para pegar todos os pokémons:
 <br>
 https://igorfs10.github.io/PokemonSite/api/
 <br>
-https://igorfs10.github.io/PokemonSite/api/pokemons.json
-<br>
 Url da API com id para pegar o pokémon:
 <br>
 https://igorfs10.github.io/PokemonSite/api/1.json
-<br>
-https://igorfs10.github.io/PokemonSite/api/bulbasaur.json
 <br>
 
 # Créditos

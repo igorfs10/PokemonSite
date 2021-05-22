@@ -30,16 +30,7 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
         print("Directory " , "api/" + id ,  " created.") 
     except FileExistsError:
         print("Directory " , "api/" + id ,  " already exists.")
-        
-    try:
-        os.mkdir("api/" + name.lower())
-        print("Directory " , "api/" + name.lower() ,  " created.") 
-    except FileExistsError:
-        print("Directory " , "api/" + name.lower() ,  " already exists.")
-    
     with open("api/" + id +"/index.json", "w") as file:
-        file.write(data)
-    with open("api/" + name.lower() +"/index.json", "w") as file:
         file.write(data)
     print(id + " generated.")
 
