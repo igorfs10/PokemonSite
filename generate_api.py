@@ -25,6 +25,18 @@ for i in range (PRIMEIRO_POKEMON, ULTIMO_POKEMON + 1):
     data = dataset.iloc[i-1:i].to_json(orient = "records").replace("[", "").replace("]", "").replace("\/", "/").replace(".0", "")
     id = str(dataset.iloc[i-1:i,0].values[0])
     name = str(dataset.iloc[i-1:i,1].values[0])
+    try:
+        os.mkdir("api/" + id)
+        print("Directory " , "api/" + id ,  " created.") 
+    except FileExistsError:
+        print("Directory " , "api/" + id ,  " already exists.")
+        
+    try:
+        os.mkdir("api/" + name.lower())
+        print("Directory " , "api/" + name.lower() ,  " created.") 
+    except FileExistsError:
+        print("Directory " , "api/" + name.lower() ,  " already exists.")
+    
     with open("api/" + id +"/index.json", "w") as file:
         file.write(data)
     with open("api/" + name.lower() +"/index.json", "w") as file:
